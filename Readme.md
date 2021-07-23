@@ -1,8 +1,9 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Дима Крупин](https://up.htmlacademy.ru/adaptive/23/user/1753073).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
 
+<!--
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
@@ -56,3 +57,4 @@ git clone SSH-адрес_вашего_форка
 
 [check-image]: https://github.com/htmlacademy-adaptive/1753073-cat-energy-23/workflows/Project%20check/badge.svg?branch=master
 [check-url]: https://github.com/htmlacademy-adaptive/1753073-cat-energy-23/actions
+-->
