@@ -43,59 +43,59 @@
         Заполните анкету, и мы подберем
         программу питания для вашего кота
       </p>
-      <form class="get-program__form program-form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="program-form__basic-info basic-info">
-          <label for="cat-name" class="program-form__label program-form__label--cat-name">Имя:<sup>*</sup></label>
-          <input class="program-form__input program-form__input--cat-name" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+      <form class="get-program__form form" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="form__basic-info">
+          <label for="cat-name" class="form__label">Имя:<sup>*</sup></label>
+          <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
 
-          <label for="cat-weight" class="program-form__label program-form__label--cat-weight">Вес(кг):<sup>*</sup></label>
-          <input class="program-form__input program-form__input--cat-weight" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+          <label for="cat-weight" class="form__label">Вес(кг):<sup>*</sup></label>
+          <input class="form__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
 
-          <label for="cat-age" class="program-form__label program-form__label--cat-age">Возраст (лет)</label>
-          <input class="program-form__input program-form__input--cat-age" type="text" name="cat-age" id="cat-age" placeholder="7">
-
-        </fieldset>
-        <fieldset class="program-form__program-goal program-goal">
-          <input class="program-form__radio program-form__radio--goal" type="radio" name="program-goal" value="program-weight-loss" id="program-weight-loss">
-          <label class="program-form__label program-form__label--weight-loss" for="program-weight-loss">Похудение</label>
-
-          <input class="program-form__radio program-form__radio--goal" type="radio" name="program-goal" value="program-weight-gain" id="program-weight-gain">
-          <label class="program-form__label program-form__label--weight-gain" for="program-weight-gain">Набор массы</label>
-
-          <input class="program-form__radio program-form__radio--goal" type="radio" name="program-goal" value="program-idk" id="program-idk">
-          <label class="program-form__label program-form__label--idk" for="program-idk">Не знаю (Нужен ваш совет)</label>
+          <label for="cat-age" class="form__label">Возраст (лет)</label>
+          <input class="form__input" type="text" name="cat-age" id="cat-age" placeholder="7">
 
         </fieldset>
-        <fieldset class="program-form__user-contacts user-contacts">
-          <legend class="program-form__legend title title--section">Контактные данные (владельца кота)</legend>
-          <label class="program-form__label program-form__label--user-contacts" for="user-email">E-mail:<sup>*</sup></label>
-          <input class="program-form__input program-form__input--email" type="email" name="user-email" id="user-email" placeholder="kuklachev@gmail.com">
+        <fieldset class="form__program-goal">
+          <input class="form__radio" type="radio" name="program-goal" value="program-weight-loss" id="program-weight-loss">
+          <label class="form__label" for="program-weight-loss">Похудение</label>
 
-          <label class="program-form__label program-form__label--user-contacts" for="user-phone">Телефон:<sup>*</sup></label>
-          <input class="program-form__input program-form__input--phone" type="text" name="user-phone" id="user-phone" placeholder="8 (960) 900-60-90">
+          <input class="form__radio" type="radio" name="program-goal" value="program-weight-gain" id="program-weight-gain">
+          <label class="form__label" for="program-weight-gain">Набор массы</label>
 
-        </fieldset>
-        <fieldset class="program-form__comment comment">
-          <legend class="program-form__legend title title--section">Комментарий</legend>
-          <textarea class="program-form__textarea" name="comment-area" cols="33" rows="6" placeholder="Расскажите обо всех повАдках кота"></textarea>
-        </fieldset>
-        <fieldset class="program-form__options options">
-          <legend class="program-form__legend title title--section">Дополнительно</legend>
-          <input class="program-form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-          <label class="program-form__label program-form__label--sweetener" for="sweetener">сахарозаменитель</label>
-
-          <input class="program-form__checkbox" type="checkbox" name="water" id="water">
-          <label class="program-form__label program-form__label--water" for="water">питьевая вода</label>
-
-          <input class="program-form__checkbox" type="checkbox" name="milk" id="milk">
-          <label class="program-form__label program-form__label--milk" for="milk">молоко</label>
-
-          <input class="program-form__checkbox" type="checkbox" name="vitamins" id="vitamins">
-          <label class="program-form__label program-form__label--vitamins" for="vitamins">витамины</label>
+          <input class="form__radio" type="radio" name="program-goal" value="program-idk" id="program-idk">
+          <label class="form__label" for="program-idk">Не знаю (Нужен ваш совет)</label>
 
         </fieldset>
-        <button class="program-form__submit button" type="submit">отправить заявку</button>
-        <p class="program-form__note"><sup>*</sup> — Обязательные поля</p>
+        <fieldset class="form__user-contacts">
+          <legend class="form__legend title title--section">Контактные данные (владельца кота)</legend>
+          <label class="form__label" for="user-email">E-mail:<sup>*</sup></label>
+          <input class="form__input form__input--email" type="email" name="user-email" id="user-email" placeholder="kuklachev@gmail.com">
+
+          <label class="form__label" for="user-phone">Телефон:<sup>*</sup></label>
+          <input class="form__input form__input--tel" type="text" name="user-phone" id="user-phone" placeholder="8 (960) 900-60-90">
+
+        </fieldset>
+        <fieldset class="form__comment">
+          <legend class="form__legend title title--section">Комментарий</legend>
+          <textarea class="form__textarea" name="comment-area" cols="33" rows="6" placeholder="Расскажите обо всех повАдках кота"></textarea>
+        </fieldset>
+        <fieldset class="form__options">
+          <legend class="form__legend title title--section">Дополнительно</legend>
+          <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+          <label class="form__label" for="sweetener">сахарозаменитель</label>
+
+          <input class="form__checkbox" type="checkbox" name="water" id="water">
+          <label class="form__label" for="water">питьевая вода</label>
+
+          <input class="form__checkbox" type="checkbox" name="milk" id="milk">
+          <label class="form__label" for="milk">молоко</label>
+
+          <input class="form__checkbox" type="checkbox" name="vitamins" id="vitamins">
+          <label class="form__label" for="vitamins">витамины</label>
+
+        </fieldset>
+        <button class="form__submit button" type="submit">отправить заявку</button>
+        <p class="form__note"><sup>*</sup> — Обязательные поля</p>
       </form>
     </main>
 
