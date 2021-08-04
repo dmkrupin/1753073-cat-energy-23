@@ -1,7 +1,7 @@
 .program {
   background-color: @color-bg-grey;
 }
-.program__title-icon {
+.program__title-icon() {
   display: inline-block;
   vertical-align: middle;
   width: 50px;
@@ -9,8 +9,11 @@
   border-radius: 50%;
   background-color: @color-accent;
   position: relative;
+}
 
-  &--weight-loss::before {
+.program__title-icon--weight-loss {
+  .program__title-icon();
+  &::before {
     content: "";
     display: inline-block;
     width: 36px;
@@ -21,7 +24,10 @@
     left: 7px;
     top: -4px;
   }
-  &--weight-gain::before {
+}
+.program__title-icon--weight-gain {
+  .program__title-icon();
+  &::before {
     content: "";
     display: inline-block;
     width: 67px;
@@ -34,3 +40,10 @@
   }
 }
 
+.program__link {
+  .title;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}

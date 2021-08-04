@@ -14,3 +14,33 @@
     url("../fonts/oswaldregular.woff2") format("woff2"),
     url("../fonts/oswaldregular.woff") format("woff");
 }
+
+.text {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @color-text-grey;
+  &--contacts {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: @color-text-grey;
+    font-style: normal;
+  }
+  &--organization {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: @color-text-grey;
+    font-style: normal;
+  }
+}
+
+.text__key-number {
+  .text;
+  font-size: 12px;
+  line-height: 12px;
+}
