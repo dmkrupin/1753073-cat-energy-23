@@ -14,7 +14,7 @@
     url("../fonts/oswaldregular.woff2") format("woff2"),
     url("../fonts/oswaldregular.woff") format("woff");
 }
-
+//текстовые примеси
 .text-mixin(@color: @color-text-grey, @font-size: 14px, @line-height: 18px) {
   font-family: "Arial", sans-serif;
   font-weight: 400;
@@ -23,6 +23,14 @@
   color: @color;
   font-style: normal;
 }
+.title-mixin(@color: @color-black, @font-size: 36px, @line-height: 36px) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @color;
+}
+
 .text {
   .text-mixin();
   &--contacts {
@@ -36,12 +44,58 @@
     .text-mixin(@color-text-grey, 12px, 12px);
   }
   &--form {
-    .text-mixin();  //текст должен быть oswald
+    .title-mixin(@color-text-grey, 16px, 18px);
     text-transform: uppercase;
   }
   &--form-note {
     .text-mixin();
     line-height: 16px;
     color: @color-black;
+  }
+}
+
+.text__title {
+  .title-mixin();
+  &--nav {
+    .title-mixin(@color-black, 20px, 20px);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &--main-intro {
+    .title-mixin(@color-white);
+  }
+  &--main-slogan {
+    .title-mixin(@color-white, 14px, 14px);
+    text-transform: uppercase;
+  }
+  &--program {
+    .title-mixin(@color-black, 24px, 37px);
+  }
+  &--program-link {
+    .title-mixin(@color-black, 16px, 16px);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &--section {
+    .title-mixin(@color-black, 36px, 40px);
+  }
+  &--key-number {
+    .title-mixin(@color-black, 24px, 24px);
+    text-transform: uppercase;
+  }
+  &--fact {
+    .title-mixin(@color-black, 14px, 20px);
+    text-transform: uppercase;
+  }
+  &--block {
+    .title-mixin (@color-black, 16px, 20px);
+    text-transform: uppercase;
+  }
+  &--semi-title {
+    .title-mixin(@color-black, 14px, 18px);
+  }
+  &--section-secondary {
+    .title-mixin(@color-black, 24px, 26px);
   }
 }
