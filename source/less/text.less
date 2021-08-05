@@ -15,32 +15,33 @@
     url("../fonts/oswaldregular.woff") format("woff");
 }
 
-.text {
+.text-mixin(@color: @color-text-grey, @font-size: 14px, @line-height: 18px) {
   font-family: "Arial", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: @color-text-grey;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @color;
+  font-style: normal;
+}
+.text {
+  .text-mixin();
   &--contacts {
-    font-family: "Arial", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: @color-text-grey;
-    font-style: normal;
+    .text-mixin(@color-text-grey, 14px, 20px);
   }
   &--organization {
-    font-family: "Arial", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: @color-text-grey;
+    .text-mixin(@color-text-grey, 16px, 18px);
     font-style: normal;
   }
-}
-
-.text__key-number {
-  .text;
-  font-size: 12px;
-  line-height: 12px;
+  &--key-number {
+    .text-mixin(@color-text-grey, 12px, 12px);
+  }
+  &--form {
+    .text-mixin();  //текст должен быть oswald
+    text-transform: uppercase;
+  }
+  &--form-note {
+    .text-mixin();
+    line-height: 16px;
+    color: @color-black;
+  }
 }
