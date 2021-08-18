@@ -37,18 +37,20 @@
 
     <main class="contents">
       <section class="main-intro">
-        <h1 class="main-intro__title text__title text__title--main-intro">
-          Функциональное питание для котов
-        </h1>
-        <p class="main-intro__shop-slogan text__title text__title--main-slogan">
-          Занялся собой? Займись котом!
-        </p>
-        <img src="http://placehold.it/280x270" alt="Изображение кошачьего корма Cat Energy Pro с курицей">
-        <a class="main-intro__button button" href="form.html">
-          Подобрать программу
-        </a>
+        <div class="wrapper">
+          <h1 class="main-intro__title text__title text__title--main-intro">
+            Функциональное питание для котов
+          </h1>
+          <p class="main-intro__shop-slogan text__title text__title--main-slogan">
+            Занялся собой? Займись котом!
+          </p>
+          <img src="http://placehold.it/280x270" alt="Изображение кошачьего корма Cat Energy Pro с курицей">
+          <a class="main-intro__button button" href="form.html">
+            Подобрать программу
+          </a>
+        </div>
       </section>
-      <section class="programs">
+      <section aria-label="Программы питания">
         <article class="program">
           <h3 class="program__title text__title text__title--program">
             <span class="program__title-icon--weight-loss"></span>
@@ -111,98 +113,107 @@
         </ul>
       </section>
       <section class="example">
-        <h2 class="key-points__title text__title text__title--section">
-          Живой пример
-        </h2>
-        <p class="example__description text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок!
-          При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="example__key-numbers">
-          <span class="example__key-number text__title text__title--key-number">
-            5 КГ
-          </span>
-          <span class="example__key-number-description text text--key-number">
-            снижение веса
-          </span>
+        <div class="wrapper">
+          <h2 class="key-points__title text__title text__title--section">
+            Живой пример
+          </h2>
+          <p class="example__description text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок!
+            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <div class="example__key-numbers">
+            <span class="example__key-number text__title text__title--key-number">
+              5 КГ
+            </span>
+            <span class="example__key-number-description text text--key-number">
+              снижение веса
+            </span>
+          </div>
+          <div class="example__key-numbers">
+            <span class="example__key-number text__title text__title--key-number">
+              60 ДНЕЙ
+            </span>
+            <span class="example__key-number-description text text--key-number">
+              затрачено времени
+            </span>
+          </div>
+          <dl class="example__fact">
+            <dt class="example__spent-text text__title text__title--fact">
+            Затраты на питание:
+            </dt>
+            <dd class="example__spent-description text__title text__title--fact">
+            15 000 РУБ.
+            </dd>
+          </dl>
         </div>
-        <div class="example__key-numbers">
-          <span class="example__key-number text__title text__title--key-number">
-            60 ДНЕЙ
-          </span>
-          <span class="example__key-number-description text text--key-number">
-            затрачено времени
-          </span>
-        </div>
-        <dl class="example__fact">
-          <dt class="example__spent-text text__title text__title--fact">
-          Затраты на питание:
-          </dt>
-          <dd class="example__spent-description text__title text__title--fact">
-          15 000 РУБ.
-          </dd>
-        </dl>
       </section>
       <section class="example__cat">
-        <img class="example__cat-image" src="http://placehold.it/320x232" alt="">
-        <div class="example__cat-slider cat-slider">
-          <span class="cat-slider__text text__title text__title--block">Было</span>
-          <div class="cat-slider__control"></div>
-          <span class="cat-slider__text text__title text__title--block">Стало</span>
+        <div class="wrapper">
+          <img class="example__cat-image" src="http://placehold.it/320x232" alt="">
+          <div class="example__cat-slider cat-slider">
+            <span class="cat-slider__text text__title text__title--block">Было</span>
+            <div class="cat-slider__control"></div>
+            <span class="cat-slider__text text__title text__title--block">Стало</span>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="contacts contacts--main">
-        <div class="contacts__info">
-          <h2 class="contacts__title text__title text__title--block">
+      <section class="page-footer__contacts page-footer__contacts--main">
+        <div class="wrapper">
+          <h2 class="page-footer__title text__title text__title--block">
             приглашаем к сотрудничеству дилеров!
           </h2>
-          <address class="contacts__address text text--contacts">
+          <address class="page-footer__address text text--contacts">
             ул. Большая
             Конюшенная, д. 19/8
             Санкт-Петербург
           </address>
         </div>
-        <img src="http://placehold.it/320x362" alt="Карта">
       </section>
-      <a class="page-footer__logo-text logo-text" href="#">
-        <span class="visually-hidden">
-          CAT ENERGY
-        </span>
-      </a>
-      <ul class="page-footer__socials socials">
-        <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="#">
-            <span class="visually-hidden">
-              Мы ВКонтакте
-            </span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--ig" href="#">
-            <span class="visually-hidden">
-              Мы в Инстаграме
-            </span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--fb" href="#">
-            <span class="visually-hidden">
-              Мы в Фейсбуке
-            </span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <p class="page-footer__organization text text--organization">
-          HTML Academy
-        </p>
-        <a class="page-footer__organization-logo" href="#">
-          <img src="img/icons/htmlacademy.svg" width="27" height="34" alt="Лого HTML Академии">
+      <iframe class="page-footer__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.219012978787!2d30.321393630644277!3d59.93882281993459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1629313908765!5m2!1sru!2sru"
+        allowfullscreen="" loading="lazy">
+     </iframe>
+      <div class="wrapper">
+        <a class="page-footer__logo-text logo-text" href="#">
+          <span class="visually-hidden">
+            CAT ENERGY
+          </span>
         </a>
+        <ul class="page-footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="#">
+              <span class="visually-hidden">
+                Мы ВКонтакте
+              </span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--ig" href="#">
+              <span class="visually-hidden">
+                Мы в Инстаграме
+              </span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb" href="#">
+              <span class="visually-hidden">
+                Мы в Фейсбуке
+              </span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <p class="page-footer__organization text text--organization">
+            HTML Academy
+          </p>
+          <a class="page-footer__organization-logo" href="#">
+            <img src="img/icons/htmlacademy.svg" width="27" height="34" alt="Лого HTML Академии">
+          </a>
+        </div>
       </div>
     </footer>
   </body>
