@@ -3,12 +3,12 @@
   margin-right: 20px;
 
   @media (min-width: @tablet-width) {
-    width: 92.3%;
+    width: 92.3%;  // = (@tablet-width - 2 * 30px) / @tablet-width; 30px - отступы по краям
     margin-left: auto;
     margin-right: auto;
   }
 
   @media (min-width: @desktop-width) {
-    width: 84.7%;
+    width: 84.7%; // = (@desktop-width - 2 * 110px) / @desktop-width; 110px - отступы по краям
   }
 }

@@ -1,5 +1,13 @@
 .nav__list {
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 35px;
+  }
 }
 
 .nav__item {
