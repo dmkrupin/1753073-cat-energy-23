@@ -6,4 +6,32 @@
   background-size: cover, cover;
   background-position: center 0, center 0;
   margin-bottom: 22px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    background-color: @color-white;
+  }
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      min-height: 800px;
+    }
+  }
+}
+
+.main-intro__title {
+  @media (min-width: @tablet-width) {
+    color: @color-black;
+  }
+}
+
+.main-intro__shop-slogan {
+  @media (min-width: @tablet-width) {
+    color: @color-black;
+  }
 }

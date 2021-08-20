@@ -7,12 +7,32 @@
 .key-points__list {
   list-style: none;
   padding-left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    row-gap: 37px;
+    column-gap: 63px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .key-points__item {
   min-height: 60px;
   position: relative;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+    margin-right: 74px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 
   &::before {
     content: "";

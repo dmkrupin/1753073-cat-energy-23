@@ -1,9 +1,15 @@
-.program__title-icon() {
-
-}
-
 .program {
   .wrapper();
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.program__item {
+  // .wrapper();
 
   background-color: @color-bg-grey;
   padding: 21px 20px 18px;
