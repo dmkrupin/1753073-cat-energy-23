@@ -15,21 +15,21 @@
           CAT ENERGY
         </span>
       </a>
+      <button class="page-header__nav-toggle">
+        <span class="visually-hidden">
+          Открыть меню
+        </span>
+      </button>
       <nav class="page-header__nav nav">
-        <button class="nav__toggle">
-          <span class="visually-hidden">
-            Открыть меню
-          </span>
-        </button>
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link text__title--nav" href="index.html">Главная</a>
+            <a class="nav__link text__title text__title--nav" href="index.html">Главная</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link text__title--nav" href="catalog.html">Каталог продукции</a>
+            <a class="nav__link text__title text__title--nav" href="catalog.html">Каталог продукции</a>
             </li>
           <li class="nav__item nav__item--current">
-            <a class="nav__link text__title--nav">Подбор программы</a>
+            <a class="nav__link text__title text__title--nav">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -39,7 +39,7 @@
       <h1 class="text__title">
         Подбор программы
       </h1>
-      <p class="get-program__description text__title--semi-title">
+      <p class="get-program__description text__title text__title--semi-title">
         Заполните анкету, и мы подберем
         программу питания для вашего кота
       </p>
@@ -67,7 +67,7 @@
 
         </fieldset>
         <fieldset class="form__user-contacts">
-          <legend class="form__legend text__title--section-secondary">Контактные данные (владельца кота)</legend>
+          <legend class="form__legend text__title text__title--section-secondary">Контактные данные (владельца кота)</legend>
           <label class="form__label text--form" for="user-email">E-mail:<sup>*</sup></label>
           <input class="form__input form__input--email text--form" type="email" name="user-email" id="user-email" placeholder="kuklachev@gmail.com">
 
@@ -76,11 +76,11 @@
 
         </fieldset>
         <fieldset class="form__comment">
-          <legend class="form__legend title text__title--section-secondary">Комментарий</legend>
+          <legend class="form__legend title text__title text__title--section-secondary">Комментарий</legend>
           <textarea class="form__textarea text--form" name="comment-area" cols="33" rows="6" placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
         <fieldset class="form__options">
-          <legend class="form__legend title text__title--section-secondary">Дополнительно</legend>
+          <legend class="form__legend title text__title text__title--section-secondary">Дополнительно</legend>
           <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
           <label class="form__label text--form" for="sweetener">сахарозаменитель</label>
 
@@ -95,59 +95,64 @@
 
         </fieldset>
         <button class="form__submit button" type="submit">отправить заявку</button>
-        <p class="form__note text--form-note"><sup>*</sup> — Обязательные поля</p>
+        <p class="form__note text text--form-note"><sup>*</sup> — Обязательные поля</p>
       </form>
     </main>
 
     <footer class="page-footer">
-      <section class="contacts">
-        <div class="contacts__info">
-          <h2 class="contacts__title text__title--block">
+      <section class="page-footer__contacts">
+        <div class="wrapper">
+          <h2 class="page-footer__title text__title text__title--block">
             приглашаем к сотрудничеству дилеров!
           </h2>
-          <address class="contacts__address text--contacts">
+          <address class="page-footer__address text text--contacts">
             ул. Большая
             Конюшенная, д. 19/8
             Санкт-Петербург
           </address>
         </div>
-        <img src="http://placehold.it/320x362" alt="Карта">
       </section>
-      <a class="page-footer__logo-text logo-text" href="#">
-        <span class="visually-hidden">
-          CAT ENERGY
-        </span>
-      </a>
-      <ul class="page-footer__socials socials">
-        <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="#">
-            <span class="visually-hidden">
-              Мы ВКонтакте
-            </span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--ig" href="#">
-            <span class="visually-hidden">
-              Мы в Инстаграме
-            </span>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--fb" href="#">
-            <span class="visually-hidden">
-              Мы в Фейсбуке
-            </span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <p class="page-footer__organization text--organization">
-          HTML Academy
-        </p>
-        <a class="page-footer__organization-logo" href="#">
-          <img src="img/icons/htmlacademy.svg" width="27" height="34" alt="Лого HTML Академии">
+      <iframe class="page-footer__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.219012978787!2d30.321393630644277!3d59.93882281993459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1629313908765!5m2!1sru!2sru"
+        allowfullscreen="" loading="lazy">
+     </iframe>
+      <div class="wrapper">
+        <a class="page-footer__logo-text logo-text" href="#">
+          <span class="visually-hidden">
+            CAT ENERGY
+          </span>
         </a>
+        <ul class="page-footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="#">
+              <span class="visually-hidden">
+                Мы ВКонтакте
+              </span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--ig" href="#">
+              <span class="visually-hidden">
+                Мы в Инстаграме
+              </span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb" href="#">
+              <span class="visually-hidden">
+                Мы в Фейсбуке
+              </span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <p class="page-footer__organization text text--organization">
+            HTML Academy
+          </p>
+          <a class="page-footer__organization-logo" href="#">
+            <img src="img/icons/htmlacademy.svg" width="27" height="34" alt="Лого HTML Академии">
+          </a>
+        </div>
       </div>
     </footer>
   </body>

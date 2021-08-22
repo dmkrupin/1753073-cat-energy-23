@@ -1,0 +1,74 @@
+.key-points {
+  .wrapper();
+
+  margin-bottom: 22px;
+}
+
+.key-points__list {
+  list-style: none;
+  padding-left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    row-gap: 37px;
+    column-gap: 63px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.key-points__item {
+  min-height: 60px;
+  position: relative;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+    margin-right: 74px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: 30px 32px, 60px 60px;
+    background-position: center center, 0 0;
+  }
+
+  &--supplements::before {
+    background-image:
+      url("../img/icons/icon-leaf.svg"),
+      linear-gradient(@color-accent, @color-accent);
+  }
+  &--easy-to-use::before {
+    background-image:
+      url("../img/icons/icon-tub.svg"),
+      linear-gradient(@color-accent, @color-accent);
+  }
+  &--product-usage::before {
+    background-image:
+      url("../img/icons/icon-eat.svg"),
+      linear-gradient(@color-accent, @color-accent);
+  }
+  &--get-results::before {
+    background-image:
+      url("../img/icons/icon-alarm.svg"),
+      linear-gradient(@color-accent, @color-accent);
+  }
+}
+
+.key-points__description {
+  margin-left: 80px;
+}
