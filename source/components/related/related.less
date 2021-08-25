@@ -1,0 +1,27 @@
+.related {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 80px;
+  }
+}
+.related__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 28px 28px;
+  }
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -2";
+  }
+}
+.related__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.related__button {
+  width: 100%;
+  text-align: center;
+}
