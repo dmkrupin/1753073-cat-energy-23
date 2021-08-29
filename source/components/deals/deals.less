@@ -1,8 +1,18 @@
 .deals {
   background-image:
+    // в макете фоновая картинка уже с зеленым цветовым фильтром,
+    // если предполагается замена картинки, то для наложения фильтра
+    // нужно расскомметировать строчку ниже
+
     // linear-gradient(@color-accent-85, @color-accent-85),
     url("../img/deals-bg-cat.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
   background-color: @color-accent-85;
+  min-height: 290px;
+
+  @media (min-width: @desktop-width) {
+    grid-column: ~"-2 / -1";
+  }
 }

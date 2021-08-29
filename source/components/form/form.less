@@ -1,3 +1,71 @@
+.form {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.form__basic-info {
+  display: flex;
+  flex-direction: column;
+
+  & .form__input {
+    flex-grow: 1;
+  }
+}
+.form__program-goal {
+  display: flex;
+  flex-direction: column;
+}
+.form__user-contacts {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 78px;
+  }
+
+  & .form__input {
+    flex-grow: 1;
+  }
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
+  }
+}
+.form__comment {
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
+  }
+
+  & .form__textarea {
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      width: 95%;
+    }
+  }
+}
+.form__options {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+}
 .form__input {
   &--email {
     background-image: url("../img/icons/icon-email.svg");
@@ -11,3 +79,5 @@
     background-position: right center;
   }
 }
+
+

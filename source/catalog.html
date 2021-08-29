@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -166,17 +167,18 @@
           </dl>
           <a class="products__button button" href="#">Заказать</a>
         </article>
-      </section>
-      <section class="more-products">
-        <h3 class="more-products__title text__title text__title--block">
-          Показать еще 100500 товаров
-        </h3>
-        <p class="more-products__description text text--product-description">
-          На самом деле вкусов гораздо больше!
-        </p>
-        <a class="more-products__show-all button button--secondary" href="#">показать все</a>
+        <section class="more-products">
+          <h3 class="more-products__title text__title text__title--block">
+            Показать еще 100500 товаров
+          </h3>
+          <p class="more-products__description text text--product-description">
+            На самом деле вкусов гораздо больше!
+          </p>
+          <a class="more-products__show-all button button--secondary" href="#">показать все</a>
+        </section>
       </section>
       <section class="related">
+        <div aria-label="Дополнительные товары">
         <h2 class="text__title text__title text__title--section-secondary">
           Дополнительные товары
         </h2>
@@ -222,7 +224,7 @@
           </dl>
           <a class="related__button button" href="#">Заказать</a>
         </article>
-        <article class="related__item related">
+        <article class="related__item">
           <h3 class="related__name text__title text__title--block">
             витамины
           </h3>
@@ -236,12 +238,12 @@
           </dl>
           <a class="related__button button" href="#">Заказать</a>
         </article>
-      </section>
-      <section class="deals">
-        <img class="deals__image" src="http://placehold.it/78x80" alt="">
-        <h3 class="deals__title text__title text__title--block-secondary">
-          Закажите все и получите чехол для кота в подарок!
-        </h3>
+        </div>
+        <section class="deals">
+          <h3 class="deals__title text__title text__title--block-secondary">
+            Закажите все и получите чехол для кота в подарок!
+          </h3>
+        </section>
       </section>
     </main>
     <footer class="page-footer">
