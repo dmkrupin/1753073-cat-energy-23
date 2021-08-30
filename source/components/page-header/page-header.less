@@ -1,25 +1,38 @@
 .page-header {
   .wrapper();
 
-  padding-top: 10px;
-  padding-bottom: 18px;
+  padding-top: 24px;
   background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
   }
 }
-
+.page-header__logo-icon {
+  img {
+    width: 33px;
+    height: 37px;
+  }
+}
 .page-header__logo-text {
+  img {
+    width: 101px;
+    height: 16px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: 13px;
   }
 }
 
 .page-header__nav {
+  margin-top: 24px;
   display: none;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -32,7 +45,33 @@
   }
 }
 
-.page-header__nav-toggle {
+.page-header__menu-toggle {
+  width: 24px;
+  height: 16px;
+  display: block;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  background-color: @color-white;
+
+  &::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background-color: @color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 8px 0 0 @color-black, 0 16px 0 0 @color-black;
+  }
+
+  &--nojs {
+    display: none;
+  }
+  &--nojs + .page-header__nav {
+    display: block;
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
