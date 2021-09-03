@@ -7,22 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <div class="wrapper">
-        <a class="page-header__logo-icon logo-icon">
+    <header class="page-header page-header--nojs">
+      <a class="page-header__logo-icon logo-icon">
         <img src="img/logo-mobile.svg" width="33" height="37" alt="Логотип компании">
-        </a>
-        <a class="page-header__logo-text logo-text">
+      </a>
+      <a class="page-header__logo-text logo-text">
         <img src="img/logo-text.svg" width="101" height="18" alt="CAT ENERGY">
-        </a>
-        <button class="page-header__menu-toggle page-header__menu-toggle--nojs">
-        <span class="visually-hidden">
-          Меню
-        </span>
+      </a>
+      <nav class="page-header__nav nav">
+        <button class="nav__toggle nav__toggle--nojs">
+          <span class="visually-hidden">
+            Меню
+          </span>
         </button>
-      </div>
-      <nav class="page-header__nav page-header__nav--nojs page-header__nav--closed nav">
-        <ul class="nav__list">
+        <ul class="nav__list nav__list--nojs nav__list--closed">
           <li class="nav__item nav__item--current">
             <a class="nav__link text__title text__title--nav">Главная</a>
           </li>
@@ -36,7 +34,7 @@
       </nav>
     </header>
 
-    <main class="contents">
+    <!-- <main class="contents">
       <section class="main-intro">
         <div class="wrapper">
           <h1 class="main-intro__title text__title text__title--main-intro">
@@ -148,7 +146,7 @@
         </div>
         <section class="example__cat">
           <div class="wrapper">
-            <img class="example__cat-image" src="http://placehold.it/320x232" alt="">
+            <img class="example__cat-image" src="http://placehold.it/100x232" alt="">
             <div class="example__cat-slider cat-slider">
               <span class="cat-slider__text text__title text__title--block">Было</span>
               <div class="cat-slider__control"></div>
@@ -216,7 +214,7 @@
           </a>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <script src="components/page-header/page-header.js"></script>
   </body>
 </html>

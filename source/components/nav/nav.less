@@ -2,13 +2,56 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+
+  &--closed {
+    display: none;
+  }
+  &--opened {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background-color: @color-white;
+    top: 64px;
+    left: 0;
+    margin-top: 0;
+  }
+  &--nojs {
+    display: block;
+  }
 
   @media (min-width: @tablet-width) {
-    margin-left: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 35px;
+  }
+}
+.nav__toggle {
+  width: 24px;
+  height: 16px;
+  display: block;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  background-color: @color-white;
+
+  &::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background-color: @color-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 8px 0 0 @color-black, 0 16px 0 0 @color-black;
+  }
+
+  &--nojs {
+    display: none;
+  }
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 .nav__item {
@@ -17,23 +60,55 @@
   padding-bottom: 24px;
   border-bottom: 1px solid @color-grey;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+    border-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .nav__link {
+      color: @color-white;
+    }
+  }
   &:first-child {
     border-top: 1px solid @color-grey;
+
+    @media (min-width: @tablet-width) {
+      border-top: 0;
+    }
   }
   &:hover .nav__link {
     color: fade(@color-black, 60%);
+
+    @media (min-width: @desktop-width) {
+      color: fade(@color-white, 60%);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
   &:active .nav__link,
   &:focus .nav__link {
     color: fade(@color-black, 30%);
+
+    @media (min-width: @desktop-width) {
+      color: fade(@color-white, 30%);
+    }
   }
   &--current {
     border-bottom: 2px solid @color-accent;
+
+    @media (min-width: @desktop-width) {
+      border-bottom: 2px solid @color-white;
+    }
   }
   &--current .nav__link,
   &--current:hover .nav__link,
   &--current:active .nav__link,
   &--current:focus .nav__link {
     color: @color-black;
+
+    @media (min-width: @desktop-width) {
+      color: @color-white;
+    }
   }
 }

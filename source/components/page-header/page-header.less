@@ -1,24 +1,28 @@
 .page-header {
+  .wrapper();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10px;
   background-color: @color-white;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    justify-content: flex-start;
+    padding-top: 24px;
   }
-  .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 17px;
 
-    @media (min-width: @tablet-width) {
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-    }
-    @media (min-width: @desktop-width) {
-      margin-top: 53px;
-      flex-grow: 1;
+  @media (min-width: @desktop-width) {
+    padding-top: 53px;
+    background-image: url("../img/main-intro-bg-cat-desktop.jpg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 720px 694px;
+  }
+  &--nojs .nav {
+    @media (max-width: @mobile-only) {
+      margin-top: 17px;
+      width: 100%;
     }
   }
 }
@@ -39,62 +43,8 @@
   }
 }
 .page-header__nav {
-  width: 100%;
-  &--closed {
-    display: none;
-  }
-  &--opened {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    background-color: @color-white;
-    top: 64px;
-    margin-top: 0;
-  }
-  &--nojs {
-    display: block;
-  }
-
   @media (min-width: @tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-grow: 1;
-    background-image:
-      linear-gradient(@color-accent-85, @color-accent-85),
-      url("../img/main-intro-bg-cat-desktop.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: 0 0, 0 0;
-    background-size: auto, 100%;
-  }
-}
-
-.page-header__menu-toggle {
-  width: 24px;
-  height: 16px;
-  display: block;
-  position: relative;
-  border: 0;
-  cursor: pointer;
-  background-color: @color-white;
-
-  &::before {
-    content: "";
-    width: 24px;
-    height: 1px;
-    background-color: @color-black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: 0 8px 0 0 @color-black, 0 16px 0 0 @color-black;
-  }
-
-  &--nojs {
-    display: none;
-  }
-  @media (min-width: @tablet-width) {
-    display: none;
+    margin-left: auto;
   }
 }
 

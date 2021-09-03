@@ -1,14 +1,19 @@
 .wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
+  min-width: 280px;
+  max-width: 420px; //280px + 50%
+  padding: 0 20px;
+  margin: auto;
 
   @media (min-width: @tablet-width) {
-    width: 92.3%;  // = (@tablet-width - 2 * 30px) / @tablet-width; 30px - отступы по краям
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 708px;
+    max-width: 1058px; //708px + 50%
+    padding: 0 30px;
+    margin: auto;
   }
 
   @media (min-width: @desktop-width) {
-    width: 84.7%; // = (@desktop-width - 2 * 110px) / @desktop-width; 110px - отступы по краям
+    min-width: 1220px;
+    max-width: 1830px; //1220px + 50%
+    padding: 0 110px;
   }
 }
