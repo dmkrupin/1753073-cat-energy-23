@@ -45,11 +45,19 @@
   .wrapper();
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
   hr {
     border: none;
     color: @color-dark-grey;
     background-color: @color-dark-grey;
     height: 1px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 .page-footer__logo-text {
@@ -63,9 +71,12 @@
   margin: 20px auto;
   padding: 0;
   width: 40%;
+
+  @media (min-width: @tablet-width) {
+    width: 130px;
+  }
 }
 .page-footer__copyright {
-  // align-self: stretch;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,6 +87,10 @@
   &:active,
   &:focus {
     color: fade(@color-dark-light, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
   }
 }
 .page-footer__organization-logo-img {
