@@ -1,27 +1,31 @@
 .main-intro {
+  .wrapper();
   background-image:
+    url('../../img/index-can-mobile.png'),
     linear-gradient(@color-accent-85, @color-accent-85),
-    url("../img/main-intro-bg-cat.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-  background-position: center 0, center 0;
-  margin-bottom: 22px;
+    url("../../img/main-intro-bg-cat.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 280px 270px,100% 302px, auto 302px;
+  background-position: center 167px,center 0, center 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     background-image: none;
     background-color: @color-white;
   }
-
-  & .wrapper {
-    // display: flex;
-    // flex-direction: column;
-    // position: relative;
-
-    @media (min-width: @tablet-width) {
-      // min-height: 800px;
-    }
-  }
+}
+.main-intro__title {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.main-intro__button {
+  margin-top: 302px;
+  align-self: stretch;
 }
 
 .main-intro__title {
