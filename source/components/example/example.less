@@ -1,32 +1,43 @@
 .example {
-  padding-top: 27px;
   background-color: @color-bg-grey-light;
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-white;
+    padding-top: 0;
+  }
 
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+
+    @media (min-width: @tablet-width) {
+      grid-template-columns: 162px 162px 1fr;
+      column-gap: 42px;
+    }
   }
   // @media (min-width: @desktop-width) {
   //   display: grid;
   //   grid-template-columns: 1fr 1fr;
   // }
-
-  //   @media (min-width: @tablet-width) {
-  //     grid-template-columns: 1fr 1fr 1fr;
-  //     justify-items: flex-start;
-  //     column-gap: 42px;
-  //   }
-  // }
 }
-
 .example__title {
-  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 0;
   grid-column: ~"1 / -1";
   justify-self: start;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 42px;
+  }
 }
 .example__description {
+  margin-top: 33px;
+  margin-bottom: 25px;
   grid-column: ~"1 / -1";
+  @media (min-width: @tablet-width) {
+    margin-top: 63px;
+  }
 }
 .example__key-numbers {
   border: 1px solid @color-grey-special;
@@ -34,19 +45,40 @@
   text-align: center;
   width: 124px;
   height: 56px;
-  background-color: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 72px;
+  }
 }
 .example__key-number {
   display: block;
-  width: 88px;
   margin-bottom: 13px;
   margin: 15px auto 0;
-  position: relative;
-  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 17px;
+  }
 }
 .example__key-number-description {
   display: block;
-  margin-top: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0 auto;
+  position: relative;
+  bottom: -10px;
+  background-color: @color-bg-grey-light;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+      background-color: @color-white;
+    br {
+      display: none;
+    }
+  }
 }
 .example__fact {
   grid-column: ~"1 / -1";
@@ -57,6 +89,8 @@
   @media (min-width: @tablet-width) {
     grid-column: ~"-2 / -1";
     margin-left: auto;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
 .example__spent-description {
@@ -64,8 +98,14 @@
 }
 .example__cat {
   margin-top: 42px;
+  padding-bottom: 30px;
   background-color: @color-bg-grey-light;
-  grid-column: ~"1 / -1";
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 250px;
+    padding-bottom: 69px;
+  }
 }
 .example__cat-image {
   width: 320px;

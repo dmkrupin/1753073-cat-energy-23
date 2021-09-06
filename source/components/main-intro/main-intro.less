@@ -15,27 +15,48 @@
   margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    background-image: none;
+    margin-top: 40px;
+    padding-left: 87px;
+    text-align: left;
+    align-items: flex-start;
+    background-image:
+      url('../../img/index-can-tablet.png');
+    background-repeat: no-repeat;
+    background-size: 709px 609px;
+    background-position: center bottom;
     background-color: @color-white;
   }
 }
 .main-intro__title {
   margin-top: 22px;
-  margin-bottom: 22px;
-}
-.main-intro__button {
-  margin-top: 302px;
-  align-self: stretch;
-}
+  margin-bottom: 0;
 
-.main-intro__title {
   @media (min-width: @tablet-width) {
     color: @color-black;
   }
 }
 
 .main-intro__shop-slogan {
+  margin-top: 25px;
+  margin-bottom: 0;
+
   @media (min-width: @tablet-width) {
     color: @color-black;
+    margin-top: 41px;
   }
 }
+
+.main-intro__button {
+  margin-top: 302px;
+  align-self: stretch;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 49px;
+    padding: 14px 26px;
+    font: 20px/20px @font-secondary;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 526px;
+  }
+}
+

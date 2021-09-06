@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+  }
 }
 
 .cat-slider__control {
@@ -14,6 +18,18 @@
   box-sizing: border-box;
   display: flex;
   cursor: pointer;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    margin-left: 14px;
+    margin-right: 14px;
+    cursor: auto;
+    padding: 0;
+    border: none;
+    background-color: #dcdcdc;
+  }
 }
 .cat-slider__toggle {
   width: 35px;
@@ -22,4 +38,21 @@
   border-radius: 6px;
   margin-right: auto;
   pointer-events: none;
+
+  @media (min-width: @tablet-width) {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 13px solid white;
+    margin: auto;
+    margin-top: -13px;
+    pointer-events: visible;
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+  }
+}
+.cat-slider__text {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dotted #636262;
+  }
 }
