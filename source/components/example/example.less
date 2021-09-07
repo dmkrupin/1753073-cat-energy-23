@@ -2,11 +2,21 @@
   background-color: @color-bg-grey-light;
 
   @media (min-width: @tablet-width) {
+    .wrapper();
     background-color: @color-white;
     padding-top: 0;
   }
-
-  .wrapper {
+  @media (min-width: @desktop-width) {
+    .wrapper();
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr;
+    justify-content: space-between;
+    background-image:
+      linear-gradient(@color-bg-grey, @color-bg-grey);
+    background-position: 100% 194px;
+    background-repeat: no-repeat;
+  }
+  .example__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -15,11 +25,13 @@
       grid-template-columns: 162px 162px 1fr;
       column-gap: 42px;
     }
+    @media (min-width: @desktop-width) {
+      grid-column: ~"1 / 2";
+      grid-template-columns: 1fr 1fr;
+      justify-items: start;
+      padding-bottom: 64px;
+    }
   }
-  // @media (min-width: @desktop-width) {
-  //   display: grid;
-  //   grid-template-columns: 1fr 1fr;
-  // }
 }
 .example__title {
   margin-top: 27px;
@@ -30,6 +42,9 @@
   @media (min-width: @tablet-width) {
     margin-top: 42px;
   }
+  @media (min-width: @desktop-width) {
+    margin-top: 59px;
+  }
 }
 .example__description {
   margin-top: 33px;
@@ -37,6 +52,10 @@
   grid-column: ~"1 / -1";
   @media (min-width: @tablet-width) {
     margin-top: 63px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 146px;
+    margin-bottom: 69px;
   }
 }
 .example__key-numbers {
@@ -83,6 +102,7 @@
 .example__fact {
   grid-column: ~"1 / -1";
   margin-top: 25px;
+  margin-bottom: 0;
   display: flex;
   justify-content: flex-start;
 
@@ -92,9 +112,18 @@
     flex-direction: column;
     align-items: flex-end;
   }
+  @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 55px;
+    margin-left: 0;
+  }
 }
 .example__spent-description {
-  margin-left: 4px;
+  margin-left: 0;
 }
 .example__cat {
   margin-top: 42px;
@@ -106,6 +135,20 @@
     margin-top: 250px;
     padding-bottom: 69px;
   }
+  @media (min-width: @desktop-width) {
+    grid-column: ~"-2 / -1";
+    margin-top: 0;
+    padding-bottom: 64px;
+    background-color: @color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-image:
+      linear-gradient(@color-bg-grey, @color-bg-grey);
+    background-position: 100% 194px;
+    background-repeat: no-repeat;
+  }
 }
 .example__cat-image {
   width: 320px;
@@ -114,4 +157,7 @@
 }
 .example__cat-slider {
   margin-bottom: 39px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }

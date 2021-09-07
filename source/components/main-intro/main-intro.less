@@ -16,7 +16,6 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 40px;
-    padding-left: 87px;
     text-align: left;
     align-items: flex-start;
     background-image:
@@ -26,6 +25,18 @@
     background-position: center bottom;
     background-color: @color-white;
   }
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-bottom: 82px;
+    background-image:
+      linear-gradient(@color-accent-85, @color-accent-85),
+      url("../img/main-intro-bg-cat-desktop.jpg");
+    // -117px это оффсет, который зависит от высоты шапки. Если пунктов меню будет больше, оффсет надо поменять
+    background-position: 100% -117px, 100% -117px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 720px 694px, 720px 694px;
+
+  }
 }
 .main-intro__title {
   margin-top: 22px;
@@ -33,6 +44,11 @@
 
   @media (min-width: @tablet-width) {
     color: @color-black;
+    margin-left: 87px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 94px;
+    margin-left: 80px;
   }
 }
 
@@ -43,6 +59,10 @@
   @media (min-width: @tablet-width) {
     color: @color-black;
     margin-top: 41px;
+    margin-left: 87px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
   }
 }
 
@@ -52,11 +72,16 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 49px;
+    margin-left: 87px;
+    margin-bottom: 526px;
     padding: 14px 26px;
     font: 20px/20px @font-secondary;
     display: inline-block;
     align-self: flex-start;
-    margin-bottom: 526px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 185px;
   }
 }
 
