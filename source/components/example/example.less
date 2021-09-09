@@ -2,12 +2,10 @@
   background-color: @color-bg-grey-light;
 
   @media (min-width: @tablet-width) {
-    .wrapper();
     background-color: @color-white;
     padding-top: 0;
   }
   @media (min-width: @desktop-width) {
-    .wrapper();
     display: grid;
     grid-template-columns: 2fr 1fr 3fr;
     justify-content: space-between;
@@ -21,11 +19,16 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
 
+    @media (max-width: @mobile-only) {
+      .wrapper();
+    }
     @media (min-width: @tablet-width) {
+      .wrapper();
       grid-template-columns: 162px 162px 1fr;
       column-gap: 42px;
     }
     @media (min-width: @desktop-width) {
+      min-width: auto;
       grid-column: ~"1 / 2";
       grid-template-columns: 1fr 1fr;
       justify-items: start;
@@ -97,6 +100,9 @@
     br {
       display: none;
     }
+  }
+  @media (min-width: @desktop-width) {
+    background-color: @color-bg-grey;
   }
 }
 .example__fact {
