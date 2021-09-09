@@ -1,39 +1,48 @@
 .page-header {
   .wrapper();
-
-  padding-top: 10px;
-  padding-bottom: 18px;
-  background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 10px;
+  background-color: @color-white;
+  align-items: center;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
+    padding-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 53px;
+    background-image:
+      linear-gradient(@color-accent-85, @color-accent-85),
+      url("../img/main-intro-bg-cat-desktop.jpg");
+    background-position: 100% 0, 100% 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 720px 694px, 720px 694px;
+  }
+  &--nojs .nav {
+    @media (max-width: @mobile-only) {
+      margin-top: 17px;
+      width: 100%;
+    }
   }
 }
-
+.page-header__logo-icon {
+  img {
+    width: 33px;
+    height: 37px;
+  }
+}
 .page-header__logo-text {
   @media (min-width: @tablet-width) {
     margin-left: 13px;
   }
 }
-
 .page-header__nav {
-  display: none;
-
   @media (min-width: @tablet-width) {
-    display: block;
     margin-left: auto;
-    width: 73%; // = 517px / (@tablet-width - 2 * 30px)
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 80%; // 975px / (@desktop-width - 2 * 110px)
   }
 }
 
-.page-header__nav-toggle {
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
