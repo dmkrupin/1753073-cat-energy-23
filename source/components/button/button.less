@@ -18,4 +18,16 @@
   &:focus {
     color: fade(@color-white, 30%);
   }
+
+  &--secondary {
+    background-color: @color-bg-grey;
+    color: @color-dark-light;
+  }
+  &--secondary:hover {
+    background-color: @color-bg-grey-light-2;
+  }
+  &--secondary:active,
+  &--secondary:focus {
+    color: fade(@color-dark-light, 30%);
+  }
 }
