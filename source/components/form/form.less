@@ -8,6 +8,7 @@
     margin-bottom: 72px;
   }
   @media (min-width: @desktop-width) {
+    .wrapper();
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
@@ -82,6 +83,12 @@
     border: 1px solid @color-grey-special;
     border-radius: 50%;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      margin-left: -60px;
+    }
   }
   &:checked + &-box::before {
     content: "";
@@ -92,6 +99,13 @@
     height: 13px;
     border-radius: 50%;
     background-color: @color-accent;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+      top: 10px;
+      left: 10px;
+    }
   }
   &:hover + &-box {
     border-color: @color-grey-special-2;
@@ -118,6 +132,12 @@
     height: 26px;
     border: 1px solid @color-grey-special;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      margin-left: -57px;
+    }
   }
   &:checked + &-box::before {
     content: "";
@@ -128,7 +148,15 @@
     height: 14px;
     background-image:
       url('../../img/icons/checkbox-flag.svg');
+      background-repeat: no-repeat;
     background-color: #fff;
+
+    @media (min-width: @tablet-width) {
+      width: 24px;
+      height: 18px;
+      top: 11px;
+      left: 10px;
+    }
   }
   &:hover + &-box {
     border-color: @color-grey-special-2;
@@ -173,6 +201,12 @@
     grid-column: ~"1 / -1";
   }
 
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    grid-column: ~"1 / 2";
+  }
+
   & .form__input {
     margin-left: 13px;
     flex-grow: 1;
@@ -195,6 +229,12 @@
     margin-top: 72px;
     margin-bottom: 71px;
     grid-column: ~"1 / -1";
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+    grid-column: ~"-2 / -1";
   }
 
   & .form__label {
