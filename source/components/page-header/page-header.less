@@ -1,5 +1,6 @@
 .page-header {
   .wrapper();
+<<<<<<< HEAD
 
   padding-top: 24px;
   background-color: #ffffff;
@@ -7,10 +8,39 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+=======
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 10px;
+  background-color: @color-white;
+  align-items: center;
+  margin-bottom: 17px;
+>>>>>>> 6627fdcfff3d7ad6ab83cf697f005c9ec8ddb193
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
+    padding-top: 24px;
   }
+<<<<<<< HEAD
+=======
+
+  @media (min-width: @desktop-width) {
+    padding-top: 53px;
+    background-image:
+      linear-gradient(@color-accent-85, @color-accent-85),
+      url("../img/main-intro-bg-cat-desktop.jpg");
+    background-position: 100% 0, 100% 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 720px 694px, 720px 694px;
+  }
+  &--nojs .nav {
+    @media (max-width: @mobile-only) {
+      margin-top: 17px;
+      width: 100%;
+    }
+  }
+>>>>>>> 6627fdcfff3d7ad6ab83cf697f005c9ec8ddb193
 }
 .page-header__logo-icon {
   img {
@@ -28,23 +58,20 @@
     margin-left: 13px;
   }
 }
-
 .page-header__nav {
+<<<<<<< HEAD
   margin-top: 24px;
   display: none;
   width: 100%;
 
+=======
+>>>>>>> 6627fdcfff3d7ad6ab83cf697f005c9ec8ddb193
   @media (min-width: @tablet-width) {
-    display: block;
     margin-left: auto;
-    width: 73%; // = 517px / (@tablet-width - 2 * 30px)
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 80%; // 975px / (@desktop-width - 2 * 110px)
   }
 }
 
+<<<<<<< HEAD
 .page-header__menu-toggle {
   width: 24px;
   height: 16px;
@@ -76,3 +103,5 @@
     display: none;
   }
 }
+=======
+>>>>>>> 6627fdcfff3d7ad6ab83cf697f005c9ec8ddb193

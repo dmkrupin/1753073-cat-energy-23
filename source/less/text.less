@@ -2,6 +2,10 @@
   font: normal 400 14px/18px @font-primary;
   color: @color-text-grey;
 
+  @media (min-width: @tablet-width) {
+    font: 16px/24px @font-primary;
+  }
+
   &--contacts {
     line-height: 20px;
   }
@@ -12,6 +16,11 @@
 
   &--key-number {
     font: 12px/12px @font-primary;
+    text-transform: lowercase;
+
+    @media (min-width: @tablet-width) {
+      font: 14px/14px @font-primary;
+    }
   }
 
   &--form {
@@ -42,46 +51,81 @@
     @media (min-width: @tablet-width) {
       font: 400 18px/24px @font-secondary;
     }
+
+    @media (min-width: @desktop-width) {
+      font: 400 20px/30px @font-secondary;
+    }
   }
 
   &--main-intro {
     color: @color-white;
+
+    @media (min-width: @tablet-width) {
+      font: 60px/60px @font-secondary;
+    }
   }
 
   &--main-slogan {
     font: 14px/14px @font-secondary;
     color: white;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font: 20px/20px @font-secondary;
+    }
   }
 
   &--program {
     font: 24px/37px @font-secondary;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font: 36px/36px @font-secondary;
+    }
   }
 
   &--program-link {
     font: 16px/16px @font-secondary;
     text-transform: uppercase;
     text-decoration: none;
+
+    @media (min-width: @tablet-width) {
+      font: 20px/30px @font-secondary;
+    }
   }
 
   &--section {
     font: 36px/40px @font-secondary;
+    @media (min-width: @tablet-width) {
+      font: 60px/60px @font-secondary;
+    }
   }
 
   &--key-number {
     font: 24px/24px @font-secondary;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font: 30px/37px @font-secondary;
+    }
   }
 
   &--fact {
     font: 14px/20px @font-secondary;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font: 20px/20px @font-secondary;
+    }
   }
 
   &--block {
     font: 16px/20px @font-secondary;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      font: 20px/30px @font-secondary;
+    }
   }
 
   &--block-secondary {

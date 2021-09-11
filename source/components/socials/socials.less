@@ -1,0 +1,30 @@
+.socials {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials__img {
+  &--vk,
+  &--ig {
+    fill: @color-dark-secondary;
+  }
+  .socials__link--vk:hover &--vk,
+  .socials__link--ig:hover &--ig {
+    fill: @color-accent;
+  }
+  .socials__link--vk:active &--vk,
+  .socials__link--ig:active &--ig {
+    fill: fade(@color-accent, 30%);
+  }
+
+  &--fb {
+    stroke: @color-dark-secondary;
+  }
+  .socials__link--fb:hover &--fb {
+    stroke: @color-accent;
+  }
+  .socials__link--fb:active &--fb {
+    stroke: fade(@color-accent, 30%);
+  }
+}

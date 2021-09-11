@@ -1,7 +1,13 @@
 .key-points {
   .wrapper();
-
-  margin-bottom: 22px;
+  margin-bottom: 42px;
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @color-grey;
+    margin-bottom: 0;
+  }
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .key-points__list {
@@ -11,7 +17,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     row-gap: 37px;
-    column-gap: 63px;
+    column-gap: 75px;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -45,30 +51,69 @@
     background-repeat: no-repeat;
     background-size: 30px 32px, 60px 60px;
     background-position: center center, 0 0;
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: 30px 32px, 80px 80px;
+    }
   }
-
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "1";
+      font: 400 280px/280px @font-secondary;
+      color: #f2f2f2;
+      position: absolute;
+      top: -40px;
+      right: 0;
+      z-index: -1;
+    }
+  }
   &--supplements::before {
     background-image:
       url("../img/icons/icon-leaf.svg"),
       linear-gradient(@color-accent, @color-accent);
+  }
+  &--supplements::after {
+    @media (min-width: @tablet-width) {
+      content: "1";
+    }
   }
   &--easy-to-use::before {
     background-image:
       url("../img/icons/icon-tub.svg"),
       linear-gradient(@color-accent, @color-accent);
   }
+  &--easy-to-use::after {
+    @media (min-width: @tablet-width) {
+      content: "2";
+    }
+  }
   &--product-usage::before {
     background-image:
       url("../img/icons/icon-eat.svg"),
       linear-gradient(@color-accent, @color-accent);
+  }
+  &--product-usage::after {
+    @media (min-width: @tablet-width) {
+      content: "3";
+    }
   }
   &--get-results::before {
     background-image:
       url("../img/icons/icon-alarm.svg"),
       linear-gradient(@color-accent, @color-accent);
   }
+  &--get-results::after {
+    @media (min-width: @tablet-width) {
+      content: "4";
+    }
+  }
 }
 
 .key-points__description {
   margin-left: 80px;
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-top: 101px;
+  }
 }
