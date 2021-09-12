@@ -2,6 +2,7 @@
   display: inline-block;
   text-align: center;
   background-color: @color-accent;
+  border: 0;
   font: 400 14px/18px @font-secondary;
   color: @color-white;
   text-decoration: none;
@@ -9,4 +10,24 @@
 
   padding-top: 7px;
   padding-bottom: 7px;
+
+  &:hover {
+    background-color: @color-accent-2;
+  }
+  &:active,
+  &:focus {
+    color: fade(@color-white, 30%);
+  }
+
+  &--secondary {
+    background-color: @color-bg-grey;
+    color: @color-dark-light;
+  }
+  &--secondary:hover {
+    background-color: @color-bg-grey-light-2;
+  }
+  &--secondary:active,
+  &--secondary:focus {
+    color: fade(@color-dark-light, 30%);
+  }
 }

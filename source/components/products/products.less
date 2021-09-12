@@ -24,6 +24,20 @@
     min-height: 429px;
   }
 }
+.products__title {
+  br:nth-child(2) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    br:nth-child(2) {
+      display: block;
+    }
+    br:first-child {
+      display: none;
+    }
+  }
+}
 .products__info {
   display: grid;
   grid-template-columns: auto auto;
@@ -38,5 +52,6 @@
 }
 .products__button {
   grid-column: ~"1 / -1";
-  text-align: center
+  text-align: center;
+
 }

@@ -70,7 +70,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .nav__link {
+    .nav__link--main {
       color: @color-white;
     }
   }
@@ -83,6 +83,9 @@
   }
   &:hover .nav__link {
     color: fade(@color-black, 60%);
+  }
+  &:hover .nav__link--main {
+    color: fade(@color-black, 60%);
 
     @media (min-width: @desktop-width) {
       color: fade(@color-white, 60%);
@@ -91,6 +94,10 @@
   }
   &:active .nav__link,
   &:focus .nav__link {
+    color: fade(@color-black, 30%);
+  }
+  &:active .nav__link--main,
+  &:focus .nav__link--main {
     color: fade(@color-black, 30%);
 
     @media (min-width: @desktop-width) {
@@ -103,6 +110,11 @@
     border-bottom: 2px solid @color-accent;
 
     @media (min-width: @desktop-width) {
+      border-bottom: 2px solid @color-accent;
+    }
+  }
+  &--current-main {
+    @media (min-width: @desktop-width) {
       border-bottom: 2px solid @color-white;
     }
   }
@@ -111,7 +123,13 @@
   &--current:active .nav__link,
   &--current:focus .nav__link {
     color: @color-black;
-
+  }
+  &--current-main .nav__link,
+  &--current-main:hover .nav__link,
+  &--current-main:active .nav__link,
+  &--current-main:focus .nav__link {
+    color: @color-black;
+    text-shadow: none;
     @media (min-width: @desktop-width) {
       color: @color-white;
     }
