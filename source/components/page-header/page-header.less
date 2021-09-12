@@ -27,12 +27,16 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 53px;
-    background-image:
-      linear-gradient(@color-accent-85, @color-accent-85),
-      url("../img/main-intro-bg-cat-desktop.jpg");
-    background-position: 100% 0, 100% 0;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 720px 694px, 720px 694px;
+  }
+  &--main {
+    @media (min-width: @desktop-width) {
+      background-image:
+        linear-gradient(@color-accent-85, @color-accent-85),
+        url("../img/main-intro-bg-cat-desktop.jpg");
+      background-position: 100% 0, 100% 0;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 720px 694px, 720px 694px;
+    }
   }
   &--nojs .nav {
     @media (max-width: @mobile-only) {
