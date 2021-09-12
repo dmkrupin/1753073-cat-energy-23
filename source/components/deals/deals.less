@@ -1,18 +1,38 @@
 .deals {
+  .wrapper();
   background-image:
-    // в макете фоновая картинка уже с зеленым цветовым фильтром,
-    // если предполагается замена картинки, то для наложения фильтра
-    // нужно расскомметировать строчку ниже
-
-    // linear-gradient(@color-accent-85, @color-accent-85),
-    url("../img/deals-bg-cat.jpg");
+    url("../../img/deals-bg-cat-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center center;
   background-color: @color-accent-85;
   min-height: 290px;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+    url("../../img/deals-bg-cat-mobile@2x.jpg");
+  }
+  @media (min-width: @tablet-width) {
+    background-image:
+    url("../../img/deals-bg-cat-tablet.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image:
+      url("../../img/deals-bg-cat-tablet@2x.jpg");
+    }
+  }
   @media (min-width: @desktop-width) {
     grid-column: ~"-2 / -1";
+    min-width: auto;
+    min-height: auto;
+    padding-left: 0;
+    padding-right: 0;
+    background-image:
+      url("../../img/deals-bg-cat-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+      url("../../img/deals-bg-cat-desktop@2x.jpg");
+    }
+
   }
 }
