@@ -46,8 +46,27 @@
 .products__image-container {
   grid-row: ~"1 / -1";
   display: flex;
-  & .products__image {
-    margin: auto;
+}
+.products__image {
+  margin: auto;
+  width: 68px;
+  height: 86px;
+  &--large {
+    width: 84px;
+    height: 100px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    height: 172px;
+    &--large {
+      width: 168px;
+      height: 206px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &--large {
+      height: 202px;
+    }
   }
 }
 .products__button {
