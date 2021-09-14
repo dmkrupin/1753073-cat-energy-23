@@ -1,8 +1,31 @@
 .more-products {
+  margin-top: 70px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
     padding: 38px;
+  }
+}
+.more-products__title {
+  position: relative;
+  &::before {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: #d3d3d3;
+    position: absolute;
+    top: -45px;
+    left: calc(50% - 15px);
+  }
+  &::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: #d3d3d3;
+    transform: rotate(90deg);
+    position: absolute;
+    top: -45px;
+    left: calc(50% - 15px);
   }
 }
 .more-products__show-all {
