@@ -1,8 +1,8 @@
 .main-intro {
   .wrapper();
   background-image:
-    url('../../img/main-intro-bg-can-mobile.png'),
-    url("../../img/main-intro-bg-cat-mobile.jpg");
+    url('../img/main-intro-bg-can-mobile.png'),
+    url("../img/main-intro-bg-cat-mobile.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: 280px 270px, auto 302px;
   background-position: center 167px, center 0;
@@ -15,8 +15,8 @@
 
   @media (min-resolution: 2dppx) {
     background-image:
-    url('../../img/main-intro-bg-can-mobile@2x.png'),
-    url("../../img/main-intro-bg-cat-mobile@2x.jpg");
+    url('../img/main-intro-bg-can-mobile@2x.png'),
+    url("../img/main-intro-bg-cat-mobile@2x.jpg");
   }
 
   @media (min-width: @tablet-width) {
@@ -24,21 +24,21 @@
     text-align: left;
     align-items: flex-start;
     background-image:
-      url('../../img/main-intro-bg-can-tablet.png');
+      url('../img/main-intro-bg-can-tablet.png');
     background-repeat: no-repeat;
     background-size: 709px 609px;
     background-position: center bottom;
     background-color: @color-white;
     @media (min-resolution: 2dppx) {
       background-image:
-      url('../../img/main-intro-bg-can-tablet@2x.png');
+      url('../img/main-intro-bg-can-tablet@2x.png');
     }
   }
   @media (min-width: @desktop-width) {
     margin-top: 0;
     margin-bottom: 82px;
     background-image:
-      url("../../img/main-intro-bg-cat-desktop.jpg");
+      url("../img/main-intro-bg-cat-desktop.jpg");
     // -117px это оффсет, который зависит от высоты шапки. Если пунктов меню будет больше, оффсет надо поменять
     background-position: right -117px;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image:
-      url("../../img/main-intro-bg-cat-desktop@2x.jpg");
+      url("../img/main-intro-bg-cat-desktop@2x.jpg");
     }
   }
 }
