@@ -8,6 +8,8 @@ const sync = require("browser-sync").create();
 // ---------
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -52,32 +54,35 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/**/*.less", gulp.series(styles));
-  gulp.watch("source/**/*.js", gulp.series(scriptCopy));
-  gulp.watch("source/*.html"), gulp.series(htmlCopy, reload );
+  gulp.watch("source/**/*.js", gulp.series(scriptMinify));
+  gulp.watch("source/*.html"), gulp.series(htmlMinify, reload );
 }
 // Reload
 const reload = (done) => {
   sync.reload();
   done();
 }
-// ------------------
-//Перекладываем html в build
+// ----------------------------------------------------------
+//минифицируем html в build
 
-const htmlCopy = () => {
+const htmlMinify = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
-exports.htmlCopy = htmlCopy;
+exports.htmlMinify = htmlMinify;
 
-//Перекладываем скрипты в build
-const scriptCopy = () => {
+//Минифицируем скрипты в build
+const scriptMinify = () => {
   return gulp.src("source/**/*.js", { base: process.cwd() })
+    .pipe(terser())
     .pipe(rename({
-      dirname: ""
+      dirname: "",
+      suffix: ".min"
     }))
     .pipe(gulp.dest("build/js"));
 }
-exports.scriptCopy = scriptCopy;
+exports.scriptMinify = scriptMinify;
 
 //Оптимизируем картинки
 const imagesOptimize = () => {
@@ -141,7 +146,7 @@ const clean = () => {
 }
 exports.clean = clean;
 
-// ---------------------------------
+// -------------------------------------------
 //Собираем build - готовый проект
 const build = gulp.series(
   clean,
@@ -149,8 +154,8 @@ const build = gulp.series(
   imagesOptimize,
   gulp.parallel(
     styles,
-    htmlCopy,
-    scriptCopy,
+    htmlMinify,
+    scriptMinify,
     webpCreate,
     spriteCreate
   ),
@@ -164,8 +169,8 @@ exports.default = gulp.series(
   imagesCopy,
   gulp.parallel(
     styles,
-    htmlCopy,
-    scriptCopy,
+    htmlMinify,
+    scriptMinify,
     webpCreate,
     spriteCreate
   ),

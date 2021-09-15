@@ -12,6 +12,7 @@
   align-items: center;
   text-align: center;
   margin-bottom: 22px;
+  position: relative;
 
   @media (min-resolution: 2dppx) {
     background-image:
@@ -37,22 +38,52 @@
   @media (min-width: @desktop-width) {
     margin-top: 0;
     margin-bottom: 82px;
-    background-image:
-      url("../img/main-intro-bg-cat-desktop.jpg");
     // -117px это оффсет, который зависит от высоты шапки. Если пунктов меню будет больше, оффсет надо поменять
-    background-position: right -117px;
-    background-repeat: no-repeat;
-    background-size: 50% auto;
+    height: calc(694px - 117px);
+    background-image: none;
 
-    @media (min-resolution: 2dppx) {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 100px;
+      //позиционирование относительно центра контейнера со смещением 114px по макету
+      left: calc(50% - 276px + 114px);
+      width: 552px;
+      height: 499px;
       background-image:
-      url("../img/main-intro-bg-cat-desktop@2x.jpg");
+        url("../img/main-intro-bg-can-desktop.png");
+      background-repeat: no-repeat;
+      background-size: 552px 499px;
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/main-intro-bg-can-desktop@2x.png");
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      // -117px это оффсет, который зависит от высоты шапки. Если пунктов меню будет больше, оффсет надо поменять
+      top: -117px;
+      right: 0;
+      width: 50%;
+      height: 694px;
+      background-image:
+        url("../img/main-intro-bg-cat-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/main-intro-bg-cat-desktop@2x.jpg");
+      }
     }
   }
 }
 .main-intro__title {
-  margin-top: 22px;
+  margin-top: 28px;
   margin-bottom: 0;
+  position: relative;
+  z-index: 4;
 
   @media (min-width: @tablet-width) {
     color: @color-black;
@@ -67,6 +98,8 @@
 .main-intro__shop-slogan {
   margin-top: 25px;
   margin-bottom: 0;
+  position: relative;
+  z-index: 4;
 
   @media (min-width: @tablet-width) {
     color: @color-black;
@@ -81,6 +114,10 @@
 .main-intro__button {
   margin-top: 302px;
   align-self: stretch;
+  position: relative;
+  z-index: 4;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     margin-top: 49px;
