@@ -19,14 +19,9 @@
   }
   &--main {
     @media (min-width: @desktop-width) {
-      background-image:
-        url("../img/main-intro-bg-cat-desktop.jpg");
-      background-position: 100% 0;
-      background-repeat: no-repeat;
-      background-size: 50% auto;
+      background-image: none;
       @media (min-resolution: 2dppx) {
-        background-image:
-        url("../img/main-intro-bg-cat-desktop@2x.jpg");
+        background-image: none;
       }
     }
   }
@@ -75,6 +70,8 @@
   }
   @media (min-width: @desktop-width) {
     width: 50%;
+    position: relative;
+    z-index: 2;
   }
 }
 
