@@ -8,7 +8,7 @@ const sync = require("browser-sync").create();
 // ---------
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
-const squoosh = require("gulp-libsquoosh");
+const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
@@ -82,7 +82,11 @@ exports.scriptCopy = scriptCopy;
 //Оптимизируем картинки
 const imagesOptimize = () => {
   return gulp.src("source/img/**/*.{svg,png,jpg}")
-    .pipe(squoosh())
+    .pipe(imagemin([
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.svgo()
+    ]))
     .pipe(gulp.dest("build/img"))
 }
 exports.imagesOptimize = imagesOptimize;
