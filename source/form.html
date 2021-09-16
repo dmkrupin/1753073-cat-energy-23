@@ -55,75 +55,75 @@
         программу питания для вашего кота
       </p>
       <form class="get-program__form form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__basic-info">
+        <fieldset class="form__basic-info" aria-label="Информация о питомце">
           <label for="cat-name" class="form__label text--form">
-            <p>Имя:<sup>*</sup></p>
+            <span>Имя:<sup>*</sup></span>
             <input class="form__input text--form" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
           </label>
           <label for="cat-weight" class="form__label text--form">
-            <p>Вес&nbsp;(кг):<sup>*</sup></p>
+            <span>Вес&nbsp;(кг):<sup>*</sup></span>
             <input class="form__input text--form" type="text" name="cat-weight" id="cat-weight" placeholder="7">
           </label>
           <label for="cat-age" class="form__label text--form">
-            <p>Возраст&nbsp;(лет):</p>
+            <span>Возраст&nbsp;(лет):</span>
             <input class="form__input text--form" type="text" name="cat-age" id="cat-age" placeholder="7">
           </label>
         </fieldset>
         <hr>
-        <fieldset class="form__program-goal">
+        <fieldset class="form__program-goal" aria-label="Выбор программы питания">
           <label class="form__label text--form" for="program-weight-loss">
             <input class="form__radio" type="radio" name="program-goal" value="program-weight-loss" id="program-weight-loss">
             <span class="form__radio-box"></span>
-            <p>Похудение</p>
+            <span>Похудение</span>
           </label>
           <label class="form__label text--form" for="program-weight-gain">
             <input class="form__radio" type="radio" name="program-goal" value="program-weight-gain" id="program-weight-gain">
             <span class="form__radio-box"></span>
-            <p>Набор массы</p>
+            <span>Набор массы</span>
           </label>
           <label class="form__label text--form" for="program-idk">
             <input class="form__radio" type="radio" name="program-goal" value="program-idk" id="program-idk">
             <span class="form__radio-box"></span>
-            <p>Не знаю (Нужен ваш совет)</p>
+            <span>Не знаю (Нужен ваш совет)</span>
           </label>
         </fieldset>
         <hr>
-        <fieldset class="form__user-contacts">
+        <fieldset class="form__user-contacts" aria-label="Контактные данные хозяина">
           <legend class="form__legend text__title text__title--section-secondary">Контактные данные<br> (владельца кота)</legend>
           <label class="form__label text--form" for="user-email">
-            <p>E-mail:<sup>*</sup></p>
+            <span>E-mail:<sup>*</sup></span>
             <input class="form__input form__input--email text--form" type="email" name="user-email" id="user-email" placeholder="kuklachev@gmail.com">
           </label>
           <label class="form__label text--form" for="user-phone">
-            <p>Телефон:<sup>*</sup></p>
+            <span>Телефон:<sup>*</sup></span>
             <input class="form__input form__input--tel text--form" type="text" name="user-phone" id="user-phone" placeholder="8 (960) 900-60-90">
           </label>
         </fieldset>
-        <fieldset class="form__comment">
+        <fieldset class="form__comment" aria-label="Расскажите о питомце">
           <legend class="form__legend title text__title text__title--section-secondary">Комментарий</legend>
-          <textarea class="form__textarea text--form" name="comment-area" cols="33" rows="6" placeholder="Расскажите обо всех повАдках кота"></textarea>
+          <textarea class="form__textarea text--form" name="comment-area" cols="33" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="form__options">
+        <fieldset class="form__options" aria-label="Дополнительные ингредиенты">
           <legend class="form__legend title text__title text__title--section-secondary">Дополнительно</legend>
           <label class="form__label text--form" for="sweetener">
             <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
             <span class="form__checkbox-box"></span>
-            <p>сахарозаменитель</p>
+            <span>сахарозаменитель</span>
           </label>
           <label class="form__label text--form" for="water">
             <input class="form__checkbox" type="checkbox" name="water" id="water">
             <span class="form__checkbox-box"></span>
-            <p>питьевая вода</p>
+            <span>питьевая вода</span>
           </label>
           <label class="form__label text--form" for="milk">
             <input class="form__checkbox" type="checkbox" name="milk" id="milk">
             <span class="form__checkbox-box"></span>
-            <p>молоко</p>
+            <span>молоко</span>
           </label>
           <label class="form__label text--form" for="vitamins">
             <input class="form__checkbox" type="checkbox" name="vitamins" id="vitamins">
             <span class="form__checkbox-box"></span>
-            <p>витамины</p>
+            <span>витамины</span>
           </label>
         </fieldset>
         <button class="form__submit button" type="submit">отправить заявку</button>
@@ -132,7 +132,7 @@
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__contacts">
+      <section class="page-footer__contacts" aria-label="Контакты для связи">
         <div class="wrapper">
           <h2 class="page-footer__title text__title text__title--block">
             приглашаем <br> к&nbsp; сотрудничеству<br> дилеров!
@@ -145,19 +145,20 @@
             <br>
             Санкт-Петербург
           </address>
+        </div>
       </section>
-      <iframe class="page-footer__map"
+      <iframe class="page-footer__map" aria-label="Адрес на карте"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.219012978787!2d30.321393630644277!3d59.93882281993459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1629313908765!5m2!1sru!2sru"
         allowfullscreen="" loading="lazy">
      </iframe>
-     <section class="page-footer__links">
+     <section class="page-footer__links" aria-label="Ссылки">
       <a class="page-footer__logo-text logo-text" href="#">
         <svg width="128" height="24" aria-label="Название компании Cat Energy">
           <use xlink:href="img/icons/sprite.svg#logo-text"></use>
         </svg>
     </a>
       <hr>
-      <ul class="page-footer__socials socials">
+      <ul class="page-footer__socials socials" aria-label="Социальные сети">
         <li class="socials__item">
           <a class="socials__link socials__link--vk" href="#">
             <svg class="socials__img socials__img--vk" width="23" height="13" aria-label="Мы Вконтакте">
