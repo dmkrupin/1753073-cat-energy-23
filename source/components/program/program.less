@@ -69,6 +69,12 @@
 .program__title {
   position: relative;
   margin: 8px 0 0 2px;
+  font: normal 400 24px/37px @font-secondary;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font: 36px/36px @font-secondary;
+  }
 
   &::before {
     content: "";
@@ -155,11 +161,15 @@
   margin-top: 19px;
   display: inline-block;
   position: relative;
+  font: normal 400 16px/16px @font-secondary;
+  text-transform: uppercase;
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
     display: inline-block;
     vertical-align: middle;
     margin-top: 52px;
+    font: 20px/30px @font-secondary;
   }
   @media (min-width: @desktop-width) {
     margin-top: 29px;

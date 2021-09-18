@@ -32,6 +32,12 @@
 .form__label {
   display: flex;
   align-items: center;
+  font: normal 400 16px/18px @font-secondary;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font: 20px/30px @font-secondary;
+  }
   p {
     margin: 0;
   }
@@ -42,6 +48,13 @@
   margin-bottom: 0;
   border: 1px solid @color-grey-2;
   padding: 13px 15px 14px;
+  font: normal 400 16px/18px @font-secondary;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font: 20px/30px @font-secondary;
+  }
+
   &::placeholder {
     color: @color-dark-light;
   }
@@ -88,6 +101,9 @@
   border: 1px solid @color-grey-2;
   box-sizing: border-box;
   margin: 0;
+  font: normal 400 16px/18px @font-secondary;
+  text-transform: uppercase;
+
   &::placeholder {
     color: @color-dark-light;
   }
@@ -103,6 +119,7 @@
 
   @media (min-width: @tablet-width) {
     text-align: left;
+    font: 20px/30px @font-secondary;
   }
 }
 .form__radio {
@@ -207,6 +224,7 @@
 
 }
 .form__legend {
+  .text-title-section-secondary();
   margin-bottom: 32px;
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
@@ -388,6 +406,9 @@
   text-align: center;
   margin-top: 21px;
   margin-bottom: 23px;
+  font: normal 400 14px/16px @font-primary;
+  color: @color-black;
+
   @media (min-width: @tablet-width) {
     margin-top: 85px;
     text-align: left;

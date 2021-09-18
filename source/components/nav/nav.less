@@ -54,6 +54,19 @@
     display: none;
   }
 }
+.nav__link {
+  font: normal 500 20px/20px @font-secondary;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font: 400 18px/24px @font-secondary;
+  }
+
+  @media (min-width: @desktop-width) {
+    font: 400 20px/30px @font-secondary;
+  }
+}
 .nav__item {
   margin: 0;
   padding-top: 22px;
