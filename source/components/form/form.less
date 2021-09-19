@@ -1,22 +1,20 @@
 .form {
   @media (min-width: @tablet-width) {
-    padding-left: 70px;
-    padding-right: 65px;
+    padding-left: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    margin-bottom: 66px;
+    margin-bottom: 49px;
   }
   @media (min-width: @desktop-width) {
-    .wrapper();
+    padding-left: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    column-gap: 76px;
   }
   fieldset {
-    padding-top: 0;
-    padding-bottom: 0;
-    border: none;
+    padding: 0;
+    border: 0;
   }
   hr {
     height: 1px;
@@ -97,10 +95,10 @@
   width: 100%;
   resize: none;
   text-align: center;
-  padding: 10px 15px;
+  padding: 9px 12px 13px;
   border: 1px solid @color-grey-2;
   box-sizing: border-box;
-  margin: 0;
+  margin: 6px 0 0;
   font: normal 400 16px/18px @font-secondary;
   text-transform: uppercase;
 
@@ -120,6 +118,8 @@
   @media (min-width: @tablet-width) {
     text-align: left;
     font: 20px/30px @font-secondary;
+    padding: 4px 15px 13px;
+    height: 169px;
   }
 }
 .form__radio {
@@ -127,7 +127,7 @@
   appearance: none;
   &-box {
     position: absolute;
-    margin-left: -50px;
+    margin-left: -44px;
     width: 30px;
     height: 30px;
     border: 1px solid @color-grey-special;
@@ -178,8 +178,8 @@
   &-box {
     position: absolute;
     margin-left: -44px;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border: 1px solid @color-grey-special;
     box-sizing: border-box;
 
@@ -192,8 +192,8 @@
   &:checked + &-box::before {
     content: "";
     position: absolute;
-    top: 6px;
-    left: 3px;
+    top: 7px;
+    left: 5px;
     width: 18px;
     height: 14px;
     background-image:
@@ -228,6 +228,7 @@
   margin-bottom: 32px;
   @media (min-width: @tablet-width) {
     margin-bottom: 76px;
+    margin-left: -4px;
   }
   br {
     @media (min-width: @tablet-width) {
@@ -242,57 +243,59 @@
   color: @color-dark-light;
   margin-bottom: 20px;
 
-  @media (max-width: @mobile-only) {
-    .wrapper();
-  }
-
   @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 0;
     grid-column: ~"1 / -1";
+    margin-top: -10px;
+    margin-bottom: 69px;
+    gap: 15px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
     grid-column: ~"1 / 2";
+    margin-bottom: 0;
   }
 
   & .form__input {
-    margin-left: 13px;
+    margin-left: 15px;
     flex-grow: 1;
+    @media (min-width: @tablet-width) {
+      padding: 15px 20px 12px;
+    }
   }
 }
-.form__program-goal {
+.form .form__program-goal {
   margin-top: 31px;
   margin-bottom: 33px;
   display: flex;
   flex-direction: column;
   gap: 31px;
 
-  @media (max-width: @mobile-only) {
-    .wrapper();
-  }
   @media (min-width: @tablet-width) {
-    padding-left: 37px;
-    padding-right: 0;
+    padding: 29px 40px 36px;
     border: 1px solid @color-grey-2;
-    margin-top: 72px;
-    margin-bottom: 71px;
+    margin-top: 0;
+    margin-bottom: 0px;
     grid-column: ~"1 / -1";
   }
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
-    margin-top: 30px;
+    margin-top: 0;
     grid-column: ~"-2 / -1";
   }
 
   .form__label {
     color: @color-dark-2;
-    padding-left: 50px;
+    padding-left: 45px;
     cursor: pointer;
     margin-bottom: -8px;
+    @media (min-width: @desktop-width) {
+      padding-left: 86px;
+    }
   }
 }
 .form__user-contacts {
@@ -301,31 +304,37 @@
   gap: 13px;
   margin-top: 26px;
 
-  @media (max-width: @mobile-only) {
-    .wrapper();
-  }
   @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 0;
-    margin-top: 43px;
+    margin-top: 77px;
     grid-column: ~"1 / -1";
+    gap: 20px;
+
     .form__label {
-      margin-top: -4px;
+      margin-top: -8px;
     }
   }
-
   @media (min-width: @desktop-width) {
+    grid-column: ~"1 / -1";
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 78px;
+    margin-top: 68px;
+    .form__legend {
+      grid-column: ~"1 / -1";
+      margin-bottom: 11px;
+    }
   }
 
   .form__input {
     flex-grow: 1;
-    margin-left: 10px;
+    margin-left: 17px;
   }
-  @media (min-width: @desktop-width) {
-    grid-column: ~"1 / -1";
+  .form__input--email {
+    @media (min-width: @tablet-width) {
+      padding: 13px 21px 14px;
+    }
   }
 }
 .form__comment {
@@ -334,9 +343,6 @@
   gap: 13px;
   margin-top: 24px;
 
-  @media (max-width: @mobile-only) {
-    .wrapper();
-  }
   @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 0;
@@ -352,7 +358,7 @@
   display: flex;
   flex-direction: column;
   gap: 17px;
-  margin-top: 49px;
+  margin-top: 23px;
   display: flex;
   flex-direction: column;
 
@@ -360,21 +366,22 @@
     padding-left: 44px;
     cursor: pointer;
     margin-top: 8px;
+    @media (min-width: @tablet-width) {
+      padding-left: 55px;
+    }
   }
 
-  @media (max-width: @mobile-only) {
-    .wrapper();
-  }
   @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 0;
-    margin-top: 39px;
+    margin-top: 65px;
+    row-gap: 45px;
+    column-gap: 28px;
     grid-column: ~"1 / -1";
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 25px;
     .form__legend {
-      margin-bottom: 0;
+      margin-bottom: -10px;
       grid-column: ~"1 / -1";
     }
     .form__label {
@@ -384,34 +391,47 @@
   @media (min-width: @desktop-width) {
     grid-column: ~"1 / -1";
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 83px;
   }
 }
 .form__submit {
   display: block;
-  width: 100%;
   margin-top: 38px;
+  font: 400 16px/20px @font-secondary;
   @media (max-width: @mobile-only) {
     .wrapper();
   }
   @media (min-width: @tablet-width) {
-    margin-top: 76px;
+    margin-top: 77px;
+    position: relative;
+    top: -21px;
     grid-column: ~"1 / 2";
+    font-size: 20px;
     padding-top: 17px;
     padding-bottom: 17px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 88px;
   }
 }
 .form__note {
   display: block;
   width: 100%;
   text-align: center;
-  margin-top: 21px;
+  margin-top: 17px;
   margin-bottom: 23px;
   font: normal 400 14px/16px @font-primary;
   color: @color-black;
 
   @media (min-width: @tablet-width) {
-    margin-top: 85px;
+    margin-top: 69px;
+    margin-left: -29px;
+    font-size: 16px;
     text-align: left;
     grid-column: ~"-2 / -1";
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 82px;
+    margin-left: 3px;
   }
 }

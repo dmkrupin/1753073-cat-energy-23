@@ -1,30 +1,34 @@
 .get-program {
+  .wrapper();
   border-top: 1px solid @color-dark-grey;
   @media (min-width: @tablet-width) {
     border: none;
   }
 }
 .get-program__title {
-  .wrapper();
   .text-title();
   margin-top: 27px;
   @media (min-width: @tablet-width) {
     margin-top: 61px;
-    padding-left: 70px;
-    padding-right: 65px;
+    padding-left: 40px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    margin-top: 74px;
   }
 }
 .get-program__description {
-  .wrapper();
   text-transform: uppercase;
   margin-top: 37px;
   font: normal 400 14px/18px @font-secondary;
 
   @media (min-width: @tablet-width) {
     margin-top: 57px;
-    padding-left: 70px;
-    padding-right: 65px;
+    padding-left: 40px;
     font: 20px/30px @font-secondary;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
   }
 }
 .get-program__form {
