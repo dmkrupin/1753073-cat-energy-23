@@ -7,6 +7,7 @@
   &--closed {
     display: none;
   }
+
   &--opened {
     display: block;
     position: absolute;
@@ -16,6 +17,7 @@
     left: 0;
     margin-top: 0;
   }
+
   &--nojs {
     display: block;
   }
@@ -27,6 +29,7 @@
     gap: 35px;
   }
 }
+
 .nav__toggle {
   width: 24px;
   height: 16px;
@@ -50,15 +53,18 @@
   &--nojs {
     display: none;
   }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
+
 .nav__link {
   font: normal 500 20px/20px @font-secondary;
   text-transform: uppercase;
   text-decoration: none;
   color: @color-black;
+
   &:visited {
     color: @color-black;
   }
@@ -71,6 +77,7 @@
     font: 400 20px/30px @font-secondary;
   }
 }
+
 .nav__item {
   margin: 0;
   padding-top: 22px;
@@ -86,10 +93,12 @@
   @media (min-width: @desktop-width) {
     padding-top: 11px;
     padding-bottom: 5px;
+
     .nav__link--main {
       color: @color-white;
     }
   }
+
   &:first-child {
     border-top: 1px solid @color-grey;
 
@@ -97,21 +106,25 @@
       border-top: 0;
     }
   }
+
   &:hover .nav__link {
     color: fade(@color-black, 60%);
   }
+
   &:hover .nav__link--main {
     color: fade(@color-black, 60%);
 
     @media (min-width: @desktop-width) {
       color: fade(@color-white, 60%);
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
+
   &:active .nav__link,
   &:focus .nav__link {
     color: fade(@color-black, 30%);
   }
+
   &:active .nav__link--main,
   &:focus .nav__link--main {
     color: fade(@color-black, 30%);
@@ -120,34 +133,39 @@
       color: fade(@color-white, 30%);
     }
   }
+
   &--current {
     padding-left: 5px;
     padding-right: 5px;
     border-bottom: 2px solid @color-accent;
 
     @media (min-width: @desktop-width) {
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: 0;
+      padding-right: 0;
       border-bottom: 2px solid @color-accent;
     }
   }
+
   &--current-main {
     @media (min-width: @desktop-width) {
       border-bottom: 2px solid @color-white;
     }
   }
+
   &--current .nav__link,
   &--current:hover .nav__link,
   &--current:active .nav__link,
   &--current:focus .nav__link {
     color: @color-black;
   }
+
   &--current-main .nav__link,
   &--current-main:hover .nav__link,
   &--current-main:active .nav__link,
   &--current-main:focus .nav__link {
     color: @color-black;
     text-shadow: none;
+
     @media (min-width: @desktop-width) {
       color: @color-white;
     }

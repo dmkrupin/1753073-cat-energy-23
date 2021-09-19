@@ -18,9 +18,11 @@
     padding: 69px 51px 57px;
     margin-bottom: 30px;
   }
+
   @media (min-width: @desktop-width) {
     padding: 41px 51px 55px;
   }
+
   &::before {
     @media (min-width: @tablet-width) {
       content: "";
@@ -33,10 +35,12 @@
       top: 92px;
       right: 62px;
     }
+
     @media (min-width: @desktop-width) {
       display: none;
     }
   }
+
   &::after {
     @media (min-width: @tablet-width) {
       content: "";
@@ -44,10 +48,12 @@
       background-repeat: no-repeat;
       position: absolute;
     }
+
     @media (min-width: @desktop-width) {
       display: none;
     }
   }
+
   &--weight-loss::after {
     @media (min-width: @tablet-width) {
       background-image: url("../img/icons-bg/program-cat-slim-tablet.svg");
@@ -57,6 +63,7 @@
       right: 92px;
     }
   }
+
   &--weight-gain::after {
     @media (min-width: @tablet-width) {
       background-image: url("../img/icons-bg/program-cat-pro-tablet.svg");
@@ -67,6 +74,7 @@
     }
   }
 }
+
 .program__title {
   position: relative;
   margin: 8px 0 0 2px;
@@ -93,6 +101,7 @@
     @media (min-width: @tablet-width) {
       display: none;
     }
+
     @media (min-width: @desktop-width) {
       display: inline-block;
       width: 100px;
@@ -100,6 +109,7 @@
       margin-right: 62px;
     }
   }
+
   &::after {
     content: "";
     display: inline-block;
@@ -109,10 +119,12 @@
     @media (min-width: @tablet-width) {
       display: none;
     }
+
     @media (min-width: @desktop-width) {
       display: inline-block;
     }
   }
+
   &--weight-loss::after {
     background-image: url("../img/icons-bg/program-cat-slim-mobile.svg");
     width: 36px;
@@ -128,12 +140,14 @@
       top: -8px;
     }
   }
+
   &--weight-gain::after {
     background-image: url("../img/icons-bg/program-cat-pro-mobile.svg");
     width: 67px;
     height: 28px;
     left: -10px;
     top: 7px;
+
     @media (min-width: @desktop-width) {
       background-image: url("../img/icons-bg/program-cat-pro-desktop.svg");
       width: 134px;
@@ -143,6 +157,7 @@
     }
   }
 }
+
 .program__description {
   margin-top: 19px;
   margin-bottom: 0;
@@ -155,11 +170,13 @@
     padding-bottom: 0;
     margin-top: 25px;
   }
+
   @media (min-width: @desktop-width) {
     width: 100%;
     margin-top: 39px;
   }
 }
+
 .program__link {
   margin-top: 19px;
   display: inline-block;
@@ -175,9 +192,11 @@
     margin-top: 51px;
     font: 20px/30px @font-secondary;
   }
+
   @media (min-width: @desktop-width) {
     margin-top: 25px;
   }
+
   // линия стрелки
   &::before {
     content: "";
@@ -188,26 +207,30 @@
     right: calc(-15px - 18px - 10px);
     background-color: @color-black;
   }
+
   // треугольник стрелки
   &::after {
     content: "";
     position: absolute;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     top: calc(50% - 7px);
-    right: calc( -15px - 30px - 18px);
+    right: calc(-15px - 30px - 18px);
     border-left: 10px solid @color-black;
     border-right: 10px solid transparent;
     border-bottom: 7px solid transparent;
     border-top: 7px solid transparent;
   }
+
   &:hover::before {
     width: 25px;
-    right: calc( -15px - 25px);
+    right: calc(-15px - 25px);
   }
+
   &:hover::after {
-    right: calc( -15px - 20px - 25px);
+    right: calc(-15px - 20px - 25px);
   }
+
   &:active,
   &:focus {
     opacity: 0.3;

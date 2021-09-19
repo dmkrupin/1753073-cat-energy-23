@@ -1,11 +1,13 @@
 .key-points {
   .wrapper();
   margin-bottom: 42px;
+
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid @color-grey;
     margin-bottom: 0;
     margin-top: 46px;
   }
+
   @media (min-width: @desktop-width) {
     border: none;
   }
@@ -41,6 +43,7 @@
     margin-right: 74px;
     margin-bottom: 0;
   }
+
   @media (min-width: @desktop-width) {
     margin-right: 0;
   }
@@ -56,12 +59,14 @@
     background-repeat: no-repeat;
     background-size: 30px 32px, 60px 60px;
     background-position: center center, 0 0;
+
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
       background-size: 30px 32px, 80px 80px;
     }
   }
+
   &::after {
     @media (min-width: @tablet-width) {
       content: "1";
@@ -73,53 +78,64 @@
       z-index: -1;
     }
   }
+
   &--supplements::before {
     background-image:
       url("../img/icons-bg/icon-leaf.svg"),
       linear-gradient(@color-accent, @color-accent);
   }
+
   &--supplements::after {
     @media (min-width: @tablet-width) {
       content: "1";
     }
   }
+
   &--easy-to-use::before {
     background-image:
       url("../img/icons-bg/icon-tub.svg"),
       linear-gradient(@color-accent, @color-accent);
   }
+
   &--easy-to-use::after {
     @media (min-width: @tablet-width) {
       content: "2";
     }
   }
+
   &--product-usage::before {
     background-image:
       url("../img/icons-bg/icon-eat.svg"),
       linear-gradient(@color-accent, @color-accent);
   }
+
   &--product-usage::after {
     @media (min-width: @tablet-width) {
       content: "3";
     }
   }
+
   &--get-results::before {
     background-image:
       url("../img/icons-bg/icon-alarm.svg"),
       linear-gradient(@color-accent, @color-accent);
   }
+
   &--get-results::after {
     @media (min-width: @tablet-width) {
       content: "4";
     }
   }
 }
+
 .key-points__title {
   .text-title-section();
   margin: 0 0 71px 0;
 }
+
 .key-points__description {
   margin-left: 80px;
+
   @media (min-width: @tablet-width) {
     margin-left: 0;
     margin-top: 112px;
