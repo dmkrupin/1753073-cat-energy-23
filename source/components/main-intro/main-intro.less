@@ -22,6 +22,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 40px;
+    margin-bottom: 0;
     text-align: left;
     align-items: flex-start;
     background-image:
@@ -37,7 +38,7 @@
   }
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    margin-bottom: 82px;
+    margin-bottom: 87px;
     // -117px это оффсет, который зависит от высоты шапки. Если пунктов меню будет больше, оффсет надо поменять
     height: calc(694px - 117px);
     background-image: none;
@@ -46,7 +47,7 @@
       content: "";
       position: absolute;
       z-index: 2;
-      top: 100px;
+      top: 28px;
       //позиционирование относительно центра контейнера со смещением 114px по макету
       left: calc(50% - 276px + 114px);
       width: 552px;
@@ -91,9 +92,10 @@
     font: 60px/60px @font-secondary;
     color: @color-black;
     margin-left: 87px;
+    margin-top: 23px;
   }
   @media (min-width: @desktop-width) {
-    margin-top: 94px;
+    margin-top: 111px;
     margin-left: 80px;
   }
 }
@@ -110,8 +112,8 @@
   @media (min-width: @tablet-width) {
     color: @color-black;
     font: 20px/20px @font-secondary;
-    margin-top: 41px;
-    margin-left: 87px;
+    margin-top: 39px;
+    margin-left: 89px;
   }
   @media (min-width: @desktop-width) {
     margin-left: 80px;
@@ -128,15 +130,16 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 49px;
-    margin-left: 87px;
+    margin-left: 90px;
     margin-bottom: 526px;
-    padding: 14px 26px;
+    padding: 17px 27px;
     font: 20px/20px @font-secondary;
     display: inline-block;
     align-self: flex-start;
   }
   @media (min-width: @desktop-width) {
     margin-left: 80px;
+    margin-top: 53px;
     margin-bottom: 185px;
   }
 }

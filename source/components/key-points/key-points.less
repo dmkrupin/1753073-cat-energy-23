@@ -4,6 +4,7 @@
   @media (min-width: @tablet-width) {
     border-bottom: 1px solid @color-grey;
     margin-bottom: 0;
+    margin-top: 46px;
   }
   @media (min-width: @desktop-width) {
     border: none;
@@ -12,18 +13,21 @@
 
 .key-points__list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
     row-gap: 37px;
-    column-gap: 75px;
+    column-gap: 59px;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    column-gap: 72px;
   }
 }
 
@@ -35,6 +39,7 @@
   @media (min-width: @tablet-width) {
     min-height: 280px;
     margin-right: 74px;
+    margin-bottom: 0;
   }
   @media (min-width: @desktop-width) {
     margin-right: 0;
@@ -64,7 +69,7 @@
       color: #f2f2f2;
       position: absolute;
       top: -40px;
-      right: 0;
+      right: 8px;
       z-index: -1;
     }
   }
@@ -111,12 +116,13 @@
 }
 .key-points__title {
   .text-title-section();
-  margin: 27px 0 39px 0;
+  margin: 0 0 71px 0;
 }
 .key-points__description {
   margin-left: 80px;
   @media (min-width: @tablet-width) {
     margin-left: 0;
-    margin-top: 101px;
+    margin-top: 112px;
+    margin-bottom: 0;
   }
 }

@@ -58,6 +58,10 @@
   font: normal 500 20px/20px @font-secondary;
   text-transform: uppercase;
   text-decoration: none;
+  color: @color-black;
+  &:visited {
+    color: @color-black;
+  }
 
   @media (min-width: @tablet-width) {
     font: 400 18px/24px @font-secondary;
@@ -80,6 +84,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 11px;
+    padding-bottom: 5px;
     .nav__link--main {
       color: @color-white;
     }
@@ -120,6 +126,8 @@
     border-bottom: 2px solid @color-accent;
 
     @media (min-width: @desktop-width) {
+      padding-left: 0px;
+      padding-right: 0px;
       border-bottom: 2px solid @color-accent;
     }
   }

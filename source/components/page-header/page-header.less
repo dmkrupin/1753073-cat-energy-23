@@ -55,19 +55,25 @@
   }
 }
 .page-header__logo-text {
-  svg {
-    width: 121px;
-    height: 18px;
-  }
   margin-top: 10px;
+  margin-left: -8px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 13px;
+    margin-left: 3px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 9px;
+    margin-left: 6px;
+    svg {
+      width: 134px;
+      height: 23px;
+    }
   }
 }
 .page-header__nav {
   @media (min-width: @tablet-width) {
     margin-left: auto;
+    flex-grow: 1;
   }
   @media (min-width: @desktop-width) {
     width: 50%;

@@ -9,13 +9,13 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 62px;
-    padding-bottom: 51px;
+    padding-bottom: 58px;
   }
   @media (min-width: @desktop-width) {
     position: absolute;
     left: 110px;
-    top: 120px;
-    padding: 62px 76px 51px;
+    top: 105px;
+    padding: 63px 48px 51px 36px;
     box-sizing: border-box;
     width: 570px;
     height: 201px;
@@ -28,8 +28,6 @@
     align-items: center;
 
     @media (min-width: @tablet-width) {
-      padding-left: 70px;
-      padding-right: 65px;
     }
 
     @media (min-width: @desktop-width) {
@@ -46,8 +44,19 @@
 .page-footer__title {
   .text-title-block();
   margin: 0;
+  @media (min-width: @tablet-width) {
+    margin-left: 41px;
+    line-height: 25px;
+  }
 }
 .page-footer__address {
+  @media (min-width: @tablet-width) {
+    text-align: right;
+    margin-right: 42px;
+  }
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
   br:last-child {
     @media (max-width: @mobile-only) {
       display: none;
@@ -59,6 +68,12 @@
   border: 0;
   width: 100%;
   height: 362px;
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+  @media (min-width: @desktop-width) {
+    height: 413px;
+  }
 }
 .page-footer__links {
   .wrapper();
@@ -67,7 +82,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
+    align-items: center;
+    margin-top: 34px;
   }
   hr {
     border: none;
@@ -83,9 +99,14 @@
 .page-footer__logo-text {
   display: inline-block;
   vertical-align: middle;
-  margin-top: 39px;
+  margin-top: 33px;
   margin-bottom: 15px;
   text-align: center;
+  @media (min-width: @tablet-width) {
+    margin-top: -5px;
+    margin-bottom: 0;
+    margin-right: 26px;
+  }
 }
 .page-footer__socials {
   margin: 22px auto;
@@ -94,14 +115,15 @@
 
   @media (min-width: @tablet-width) {
     width: 130px;
+    margin: 0 auto 9px;
   }
 }
 .page-footer__copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 14px;
-  margin-bottom: 21px;
+  margin-top: 7px;
+  padding-bottom: 21px;
 }
 .page-footer__organization {
   text-decoration: none;
@@ -112,10 +134,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: 22px;
+    margin-right: 17px;
   }
 }
+.page-footer__organization-logo {
+  display: inline-block;
+}
 .page-footer__organization-logo-img {
+  vertical-align: middle;
+  margin-right: -6px;
   fill: @color-dark-secondary;
   .page-footer__organization-logo:hover & {
     fill: @color-accent;
