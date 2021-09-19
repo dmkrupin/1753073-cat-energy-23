@@ -1,7 +1,7 @@
 .deals {
   .wrapper();
   margin-top: 36px;
-  margin-bottom: 26px;
+  margin-bottom: 36px;
   padding-left: 0;
   padding-right: 0;
   background-image:
@@ -26,11 +26,14 @@
     background-image:
     url("../img/deals-bg-cat-tablet.jpg"),
     url("../img/icons-bg/icon-gift.svg");
-    background-position: 20% center, 0 0;
+    background-position: 13% center, 0 0;
     background-size: 80px auto, 100% auto;
     flex-direction: row;
     align-items: center;
     min-height: 200px;
+    min-width: auto;
+    margin-top: 69px;
+    margin-bottom: 76px;
 
     @media (min-resolution: 2dppx) {
       background-image:
@@ -42,7 +45,7 @@
     grid-column: ~"-2 / -1";
     min-width: auto;
     height: 100%;
-    margin: 0;
+    margin: 0 0 0 54px;
     padding-left: 0;
     padding-right: 0;
     flex-direction: column;
@@ -51,7 +54,7 @@
       url("../img/icons-bg/icon-gift.svg"),
       url("../img/deals-bg-cat-desktop.jpg");
     background-size: 80px auto, cover;
-    background-position: 50% 20%, 0 0;
+    background-position: 50% 27%, 0 0;
 
     @media (min-resolution: 2dppx) {
       background-image:
@@ -72,10 +75,12 @@
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    margin-right: 124px;
+    margin-right: 95px;
+    text-align: left;
   }
   @media (min-width: @desktop-width) {
     margin-right: 0;
     margin-bottom: 42px;
+    text-align: center;
   }
 }
